@@ -5,10 +5,30 @@ import './App.css'
 import wikiData from './wikiData.json'
 
 function App() {
+  const [isAuthenticated, setIsAuthenticated] = useState(false)
+  const [passwordInput, setPasswordInput] = useState('')
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [selectedArticle, setSelectedArticle] = useState(null)
   const [filteredArticles, setFilteredArticles] = useState([])
+
+  const handlePasswordSubmit = (e) => {
+    e.preventDefault()
+    if (passwordInput === '123456789') {
+      setIsAuthenticated(true)
+      sessionStorage.setItem('swimnerd-wiki-auth', 'true')
+    } else {
+      alert('Incorrect password')
+      setPasswordInput('')
+    }
+  }
+
+  useEffect(() => {
+    // Check if already authenticated in this session
+    if (sessionStorage.getItem('swimnerd-wiki-auth') === 'true') {
+      setIsAuthenticated(true)
+    }
+  }, [])
 
   useEffect(() => {
     filterArticles()
@@ -36,6 +56,30 @@ function App() {
   }
 
   const categories = ['all', 'Bob Bowman', 'Technique', 'Workouts', 'Coaching', 'Mental', 'Racing', 'Methodology']
+
+  if (!isAuthenticated) {
+    return (
+      <div className="app">
+        <div className="password-screen">
+          <div className="password-container">
+            <h1>🏊‍♂️ Swimnerd Wiki</h1>
+            <p>Private Access Required</p>
+            <form onSubmit={handlePasswordSubmit}>
+              <input
+                type="password"
+                placeholder="Enter password"
+                value={passwordInput}
+                onChange={(e) => setPasswordInput(e.target.value)}
+                className="password-input"
+                autoFocus
+              />
+              <button type="submit" className="password-submit">Access Wiki</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className="app">

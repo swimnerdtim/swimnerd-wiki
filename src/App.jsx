@@ -41,7 +41,7 @@ function App() {
     <div className="app">
       <header className="header">
         <h1>🏊‍♂️ Swimnerd Wiki</h1>
-        <p className="subtitle">{wikiData.stats.totalPages} pages • {wikiData.stats.totalSize} of coaching knowledge</p>
+        <p className="subtitle">{wikiData.articles.length} articles • Expert coaching knowledge from 58 books</p>
       </header>
 
       {!selectedArticle ? (

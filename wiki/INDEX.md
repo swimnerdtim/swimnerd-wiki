@@ -1,485 +1,391 @@
-# Swimnerd Wiki - Complete Index
+# Swimnerd Wiki Index
 
-**Last Updated**: 2026-04-05  
-**Status**: Phase 3 Complete - Core Foundation Built  
-**Total Pages**: 14 pages  
-**Content**: 188KB actionable coaching knowledge
+**Welcome to the Swimnerd Knowledge Base** — Actionable swimming wisdom from world-class coaches, backed by Olympic results.
 
 ---
 
-## 📚 Bob Bowman - Coaching Wisdom (103KB | 7 pages)
+## 🏊‍♂️ Quick Navigation
 
-### Philosophy & Evolution
-**[`/coaches/bob-bowman/coaching-philosophy.md`](coaches/bob-bowman/coaching-philosophy.md)** (11KB)
-- Evolution from "Hammer" approach to empathy-driven coaching
-- Michael vs. Leon: opposite coaching approaches for different athletes
-- Process vs. outcome goals + physiological activation theory
-- Visualization techniques (Michael's 3:07 dream)
-- Post-Olympic management (new approach after historical mistakes)
-- Building larger coaching "toolbox"
-- Daily practices: quotes, mental training, self-talk
+### By Topic
+- [**Coaches**](#coaches) — Philosophy, training systems, real workouts
+- [**Technique**](#technique) — Stroke mechanics, efficiency, drills
+- [**Workouts**](#workouts) — Sets used by champions
+- [**Methodology**](#methodology) — Periodization, taper, volume, intensity
 
-**[`/coaches/bob-bowman/training-philosophy.md`](coaches/bob-bowman/training-philosophy.md)** (14KB)
-- Practice structure: 30% warmup / 50% main / 20% post
-- Texas implementation vs. Eddie Reese's approach
-- Building discomfort & resilience (goggle training story)
-- Fall morning sessions (7-8k in 90-100 min)
-- Christmas set example (10x100 + 10x50 maximal from dive)
-- Professional athlete development
-- Details matter: 0.01 second = 12 years of practice
+### By Swimmer
+- [Michael Phelps](#michael-phelps)
+- [Leon Marchand](#leon-marchand)
+- [Reagan Smith](#reagan-smith)
+- [Emma McKeon](#emma-mckeon)
 
-### Bob Bowman Deep Dives (NEW - Phase 3)
-
-**[`/coaches/bob-bowman/golden-rules.md`](coaches/bob-bowman/golden-rules.md)** ✨ NEW (12KB)
-- Three phases of high performance (imagination → challenge → high performance)
-- 4 goal types framework (dream → mid-range → short-range → right now)
-- Performance planning system (5-step template)
-- Visualization superpower (first/third person, sensory details, 3:07 dream)
-- Actions = words philosophy (horse story)
-- Details win gold medals (0.01 second finish breakdown)
-- Get comfortable being uncomfortable
-- Activation control (process vs. outcome for managing nerves)
-- The expert definition + on luck
-- Building the toolbox evolution
-
-**[`/coaches/bob-bowman/texas-ncaa-championship.md`](coaches/bob-bowman/texas-ncaa-championship.md)** ✨ NEW (16KB)
-- First coach to win back-to-back NCAAs with two different teams (ASU 2024, Texas 2025)
-- Integration strategy: gradual 60-70% → 100% implementation
-- NCAA vs. international: different math, team focus, everyone matters
-- Day-by-day meet breakdown (Night 1 amazing → Day 2 body blows → Day 3 comeback)
-- Emotional control lesson (take pressure away, don't add it)
-- Discomfort tolerance building (practice pace, fall volume, Christmas sledgehammer)
-- "Going to the well" debate (vs. Ray Looze)
-- Hubert Kós story: lost every event at SECs → dominated NCAAs (1:34-low 200 back)
-- Long course transition strategy (start immediately, roll into it)
-- Shane Casas 50s story (3000 straight after texting about sprint training)
-
-**[`/coaches/bob-bowman/coaching-mastermind.md`](coaches/bob-bowman/coaching-mastermind.md)** ✨ NEW (25KB)
-- Michael vs. Leon: complete comparison (physical, demeanor, coaching approach required)
-- How Bob constructs pressure performance (artificial stress, low-risk adversity, Olympics chaos prep)
-- Michael's 5-year streak: how it actually happened (not pre-planned, psychological advantage)
-- Leon's breaks: European vs. American cultural differences
-- The broken French swimmer story (learned not to repeat with Leon)
-- Visualization technique evolution (age 11 → Beijing, 300+ mental reps)
-- Neuroplasticity technology experiment (blackout goggles)
-- How Bob studies to get better (3 Olympic coaches, books, podcasts, outside sports)
-- Lactate testing validation (Leon's 12-4-2 pattern)
-- Sodium bicarbonate protocols (1992 with Paul Bergen)
-- Bio-feedback evolution (Whoop validation, subjective sleep data)
-- Boomer "Grandpa" story (how Bob became family)
-
-### Elite Athlete Development
-**[`/coaches/bob-bowman/leon-marchand-training.md`](coaches/bob-bowman/leon-marchand-training.md)** (12KB)
-- Leon vs. Michael: personality & training differences
-- Paris 2024 Olympics: 4 golds, home crowd, life-changing
-- Post-Olympic transition: 9-12 month recovery plan
-- Australia with Dean Boxall: why the detour works
-- Managing emotional exhaustion & loss of privacy
-- Core group stability strategy
-- The "inescapable reality" of program staleness
-
-**[`/coaches/bob-bowman/michael-phelps-lessons.md`](coaches/bob-bowman/michael-phelps-lessons.md)** (13KB)
-- The 4 factors of excellence (genetics, environment, work, learning)
-- Christmas training story (52 extra days/year)
-- Consistency over perfection: "8 out of 10" every day
-- Goal setting: age 11 "Olympics" → age 23 "best ever"
-- Sleep as superpower
-- 0.01 second butterfly finish (Čavić race)
-- "Grandpa Bob" effect on coaching evolution
-- How to eat an elephant: one bite at a time
+### By Use Case
+- [**I want a specific workout**](#famous-sets)
+- [**I want coaching philosophy**](#philosophy--mindset)
+- [**I want technique fixes**](#technique-breakdowns)
+- [**I want taper/periodization info**](#methodology)
+- [**I'm preparing for open water**](#open-water)
 
 ---
 
-## 🏊‍♂️ Technique (6KB | 1 page)
+## 📚 Coaches
+
+### Historical Analysis (3 pages — NEW from *The 100 Greatest Swimmers*) 🆕
+**Source:** John Lohn's comprehensive ranking of top 100 swimmers (1896-2016)  
+**Significance:** Patterns across 120 years of Olympic swimming — What makes champions, how training evolved, medal trends by country/era
+
+- 🆕 [**Championship Traits from Top 100 Swimmers**](coaching/championship-traits-top-100-swimmers.md) — Versatility, consistency, mental resilience, peak age patterns, what separates #1 from #100 ⭐
+- 🆕 [**Olympic Medal Patterns Analysis**](methodology/olympic-medal-patterns-analysis.md) — Country dominance (USA vs. AUS), national specialization pipelines (Australia = distance, Hungary = IM), peak age by event, relay advantages ⭐
+- 🆕 [**Comparing Eras: Coaching Evolution**](coaching/comparing-eras-coaching-evolution.md) — Schedule expansion (11 events in 1924 → 32 in 2016), training science revolution (Counsilman's intervals → modern individualization), competition depth (USA dominance → globalization) ⭐
+
+### Doc Counsilman (3 pages) 🆕
+**Olympic Results:** Indiana University coach 33 years, coached Mark Spitz to 7 Olympic golds, revolutionized training science  
+**Significance:** First coach to use underwater filming, invented modern interval training science, applied physics to stroke mechanics
+
+- 🆕 [**Four Training Methods**](methodology/counsilman-four-training-methods.md) — Overdistance, interval, repetition, sprint — how to combine all four, John Kinsella examples ⭐
+- 🆕 [**Stroke Mechanics Principles**](technique/counsilman-stroke-mechanics-principles.md) — Elliptical pulls, high elbow, straight-bent-straight, streamlining, Newton's laws applied ⭐
+- 🆕 [**Interval Training Practical Guide**](training/interval-training-practical-guide.md) — How to design sets, progression models, pulse rate monitoring, avoid common mistakes ⭐
+
+### Mark Schubert (3 pages) 🆕
+**Olympic Results:** 7 Olympic teams (1992-2012), 50+ Olympic medals, USC dynasty (1992-2006), 48 NCAA titles  
+**Significance:** Foundational training methodology — specificity, energy systems, developmental training
+
+#### Training Philosophy & Systems
+- 🆕 [**Training Philosophy & Energy Systems**](coaches/mark-schubert/training-philosophy-energy-systems.md) — Specificity, 3 fuel tanks, developmental training, adaptation, consistency ⭐
+- 🆕 [**Sample Workouts**](coaches/mark-schubert/sample-workouts.md) — Sprint, middle-distance, distance, stroke-specific, IM, age-group sets ⭐
+
+### Janet Evans (3 pages) 🆕
+**Olympic Results:** 4 gold, 1 silver (1988-1996), multiple world records in 400/800/1500 free  
+**Significance:** Distance swimming queen, active rest training pioneer, systematic progression framework
+
+#### Training Philosophy & Systems
+- 🆕 [**Five Steps to Swimming Success**](coaching/evans-five-steps-progression.md) — Breathe → Comfort → Core/Technique → Fitness → Intensity ⭐
+- 🆕 [**Log Book Method**](training/evans-log-book-method.md) — How to track every workout like a champion ⭐
+
+### Bob Bowman (10 pages) 🆕
+**Olympic Results:** 32 medals (16 gold) — Phelps, Marchand, Summer McIntosh, Reagan Smith
+
+#### Training & Workouts
+- 🏆 [**Phelps 10-Day Training Cycle (Dec 2003)**](coaches/bob-bowman/phelps-10-day-cycle-2003.md) — Complete workout cycle with times ⭐
+- [Writing Workouts](coaches/bob-bowman/writing-workouts.md) — Structure, progressions, Grant Hackett set
+- [ASU Butterfly Quality Set](coaches/bob-bowman/asu-butterfly-quality-set.md) — 20×50 fly progression
+- [Phelps Training 2003](coaches/bob-bowman/phelps-training-2003.md) — High-volume training philosophy
+
+#### Philosophy & Leadership
+- [Coaching Essentials](coaches/bob-bowman/coaching-essentials.md) — Servant leadership, Shane Casas story, Emily Get lesson
+- [Mastery & Motivation](coaches/bob-bowman/mastery-and-motivation.md) — "Do Your Work," Marcus Aurelius, ice cream philosophy
+- [Championship Characteristics](coaches/bob-bowman/championship-characteristics.md) — Daily habits of champions
+
+#### Competition & Strategy
+- [Leon Marchand Paris 2024](coaches/bob-bowman/leon-marchand-paris-2024.md) — 4 gold medals, race strategy, taper insights
+- 🆕 [**Bob Bowman's Coaching Philosophy**](coaches/bob-bowman-coaching-philosophy.md) — Developmental psychology, long-term planning, recruit for fit ⭐
+
+---
+
+## 🏊 Technique
+
+### Fundamentals (NEW from *Championship Swimming* & *Fundamentals of Fast Swimming*)
+- 🆕 [**Streamlining & Body Position**](technique/streamlining-body-position.md) — Float test, rotation vs. flat, kicking mechanics, pool speed factors ⭐
+- ✅ [**Coupling Motions**](technique/coupling-motions.md) — Gary Hall Sr.'s physics-based timing system for all 4 strokes ⭐
+
+### Freestyle (NEW from *Fundamentals of Fast Swimming*)
+- 🆕 [**Three Styles of Freestyle**](technique/freestyle/three-styles-of-freestyle.md) — Hip-driven, shoulder-driven, hybrid (loping) — stroke rate differences ⭐
+- [Breathing Mechanics](technique/freestyle/breathing-mechanics.md) — One-goggle rule, bow wave, over-rotation fixes
+
+### Breaststroke (NEW from *Championship Swimming*)
+- 🆕 [**Modern Breaststroke Technique**](technique/breaststroke/modern-breaststroke-technique.md) — Heart-shape pull, recovery speed, pre-1988 vs. modern ⭐
+- See: [Phelps 10-Day Cycle](coaches/bob-bowman/phelps-10-day-cycle-2003.md) — Transformation from 1:14 → 1:10
+
+### Butterfly
+- See: [ASU Butterfly Quality Set](coaches/bob-bowman/asu-butterfly-quality-set.md) — Stroke count, DPS focus
+- See: [Phelps 10-Day Cycle](coaches/bob-bowman/phelps-10-day-cycle-2003.md) — Stroke & Time (-10 rule)
+
+### Backstroke
+- See: [Phelps 10-Day Cycle](coaches/bob-bowman/phelps-10-day-cycle-2003.md) — 60×50 progression, underwater work
+
+---
+
+## 💪 Training Methodology
+
+### Bill Sweetenham (NEW — 3 pages from *Championship Swim Training*) 🆕
+**Olympic Results:** Australian National Team Head Coach, British Olympic Head Coach, GB Performance Director  
+**Significance:** Five training zones, individualized pace setting, 21-day taper model, benchmark testing protocols
+
+- 🆕 [**Training Zones & Systems**](methodology/sweetenham-training-zones.md) — Five-zone system, volume distribution by swimmer type, heart rate below max, PB + constant ⭐
+- 🆕 [**Benchmark Test Sets**](methodology/sweeteenth-benchmark-tests.md) — 7×200 step test, 8×50 efficiency test, cold swims, max HR testing ⭐
+- 🆕 [**Tapering for Competition**](methodology/sweetenham-tapering.md) — 21-day model, volume reduction (60% → 50% → minimal), heats/semis/finals prep ⭐
+
+### Janet Evans (NEW from *Total Swimming*) 🆕
+**Olympic Results:** 4 gold, 1 silver, world records in distance free  
+**Significance:** Active rest training, anaerobic threshold work, "easy speed" development
+
+- 🆕 [**Active Rest Training**](methodology/active-rest-training.md) — Varying effort (ES 4-8) to build anaerobic threshold, raise AT ceiling, swim fast longer ⭐
+
+### Total Immersion for Triathletes (NEW — 2 pages from *Triathlon Swimming Made Easy*) 🆕
+**Source:** Terry Laughlin (Total Immersion founder)  
+**Significance:** Efficiency-first approach for adult swimmers, triathletes, masters — different philosophy than competitive training
+
+- 🆕 [**Total Immersion for Triathletes**](training/total-immersion-for-triathletes.md) — Why tri swimming ≠ competitive swimming, balance first, stroke length focus, efficiency over conditioning, distance progression ⭐
+- 🆕 [**Swimming Golf & Stroke Length Games**](training/swimming-golf-stroke-length-games.md) — Count strokes + time = golf score, find optimal SL/SR combo, Version 1 (fewer strokes) vs. Version 2 (faster tempo), advanced variations ⭐
+
+### Foundations (from *Championship Swimming* & *Fundamentals of Fast Swimming*)
+- 🆕 [**Interval Training Basics**](training/interval-training-basics.md) — Setting intervals, 75% rule, Animal Night test, hold-your-pace strategy ⭐
+- 🆕 [**Mental Preparation for Competition**](training/mental-preparation-schubert.md) — Schubert's peak performance system: Relaxation + Concentration + Visualization ⭐
+- ✅ [**Physics of Swimming Speed (Hall)**](methodology/physics-swimming-speed-hall.md) — Drag vs. propulsion compromise, vortices, velocity³ power relationship, anatomical constraints ⭐
+- ✅ [**Race Club Technology**](methodology/race-club-technology.md) — Velocity meter, pressure meter, propulsion/drag meter, evidence-based coaching ⭐
+
+## 🌊 Open Water (7 pages — Penny Lee Dean + Steven Munatones)
+
+**Sources:**
+- *Open Water Swimming* by Penny Lee Dean, EdD (13 world records, English Channel 7:40)
+- *Open Water Swimming* by Steven Munatones (2011) — Race tactics, training systems
+
+### For Pool Coaches: Skills & Training
+- [**OW Skills for Pool Coaches**](open-water/open-water-skills-pool-coaches.md) — Bilateral breathing, sighting, safety protocols — what to teach BEFORE athletes enter OW ⭐
+- [**Technique Adaptations (Penny Lee)**](open-water/technique-adaptations-penny-lee.md) — Pool stroke ≠ OW stroke: cadence, kick, body position, sighting mechanics ⭐
+- 🆕 [**Pool Training for Open Water (Munatones)**](open-water/pool-training-open-water-munatones.md) — Complete pool-based prep, distance-specific training plans (5K, 10K, 25K+) ⭐
+- 🆕 [**Freestyle Technique for OW (Munatones)**](open-water/freestyle-technique-open-water-munatones.md) — Stroke modifications, symmetry training, sighting integration ⭐
+
+### Race-Day Execution
+- 🆕 [**Racing Tactics & Strategy (Munatones)**](open-water/racing-tactics-munatones.md) — Mass starts, pack swimming, drafting, turn buoys, feeding, finish sprints ⭐
+- [**Hydration & Nutrition**](open-water/hydration-nutrition-ow.md) — Paula Newby-Fraser case study, feeding protocols, electrolyte strategy ⭐
+
+### Safety & Risk
+- [**Safety & Risk Management**](open-water/safety-risk-management.md) — Hypothermia, marine life, tides, weather, support craft, SEAL protocols ⭐
+
+**Key insight:** Open water requires 6-8 weeks preparation MINIMUM. Bilateral breathing, sighting, and cold-water acclimatization are non-negotiable safety skills.
+
+---
+
+## 🏋️ Workouts
+
+### Famous Sets
+
+#### Grant Hackett Set (40×50s)
+From: [Writing Workouts](coaches/bob-bowman/writing-workouts.md)
+- 16 × 50 on :45 — every 4th fast
+- 12 × 50 on :50 — every 3rd fast
+- 8 × 50 on :55 — every 2nd fast
+- 4 × 50 on 1:00 — all fast
+
+**Why it's great:** Versatile, develops pace, mimics racing
+
+#### 8 × 100 on 4:00 (100 fast, 100 easy)
+From: [Phelps 10-Day Cycle](coaches/bob-bowman/phelps-10-day-cycle-2003.md)
+- **Phelps times:** 1:01, 1:02, 1:03, 59.1, 59.2, 59.1, 59.1, 58.9
+- **Ideal for:** 200m events
+- **Parametric evolution:** Mid-season (8 reps) → Pre-meet (3 reps, descended)
+
+#### 20 × 50 Fly Progression (2-4-6-8)
+From: [ASU Butterfly Quality Set](coaches/bob-bowman/asu-butterfly-quality-set.md)
+- Build quality in waves
+- 2 × 50 easy between rounds
+- Max VO2 butterfly pace
+
+#### 30 × 50 Stroke & Time
+From: [Phelps 10-Day Cycle](coaches/bob-bowman/phelps-10-day-cycle-2003.md)
+- 1 kick, 1 drill, 1 swim (on 1:00 LCM)
+- **Target:** 27s @ 17 strokes (butterfly -10 rule)
+- **Phelps average:** 27/17
+
+---
+
+## 🧠 Philosophy & Mindset
+
+### Mental Training (5 pages — NEW from *With Winning in Mind* by Lanny Bassham) 🆕
+**Source:** Olympic shooting champion (1976 gold medal) — mental system tested under extreme pressure  
+**Significance:** Winner's mindset, Triad State (Conscious-Subconscious-Self-Image balance), mental programs, directive affirmations
+
+- 🆕 [**Mental Management for Swim Coaches**](mental-training/mental-management-bassham.md) — Triad State, winner's mindset, mental programs, "That's like me!" reinforcement ⭐
+- 🆕 [**Mental Rehearsal for Swimming**](mental-training/mental-rehearsal-swimming.md) — Visualization techniques, neural pathways, race prep, error correction, confidence building ⭐
+- 🆕 [**Performance Journaling & Self-Image Building**](mental-training/performance-journaling-swimming.md) — Directive affirmations (change any habit in 21 days), writing imprints 10x stronger than thinking ⭐
+- [**Michael Phelps' Mental Preparation System**](mental-training/phelps-mental-preparation-system.md) — ADHD to Olympic focus, adversity as fuel, visualization of disasters ⭐
+- [**Beijing 2008: Racing Lessons**](mental/beijing-2008-racing-lessons.md) — 8 golds, swimming blind, 0.01-second wins, relay miracles ⭐
+
+### Coaching Philosophy (NEW from *Every Movement Matters*)
+- 🆕 [**Athlete-Centered Coaching**](coaching-philosophy/athlete-centered-coaching.md) — Quality coaching framework, react vs. respond, finding your "why" ⭐
+- 🆕 [**Championship Culture**](coaching-philosophy/championship-culture.md) — Trust, fear/anxiety, standards vs. rules, coaching your own child
+- 🆕 [**Engaging & Effective Practice**](coaching-philosophy/engaging-effective-practice.md) — Practice design, skill acquisition, "win the day" mindset
+
+### Core Principles
+- **"Do Your Work"** — [Mastery & Motivation](coaches/bob-bowman/mastery-and-motivation.md)
+- **Repetition over single fast swims** — [Phelps 10-Day Cycle](coaches/bob-bowman/phelps-10-day-cycle-2003.md)
+- **Servant leadership** — [Coaching Essentials](coaches/bob-bowman/coaching-essentials.md)
+- **Mastery vs. extrinsic motivation** — [Mastery & Motivation](coaches/bob-bowman/mastery-and-motivation.md)
+
+### Key Quotes
+> "Development occurs in repetition, not in one fast swim."  
+> — Bob Bowman
+
+> "To accept it without arrogance, and let it go with indifference."  
+> — Marcus Aurelius (on success & failure)
+
+> "It's like ice cream — good while it lasts."  
+> — John Urbanchek (on Olympic medals)
+
+> "Confidence comes from demonstrated ability."  
+> — Bill Parcells
+
+---
+
+## 📊 Methodology
+
+### Periodization (NEW from *Periodization Training for Sports*)
+- 🆕 [**Periodization: The Bompa Model**](methodology/periodization-bomba-model.md) — Six-phase system (AA → H → MS → Conversion → Competition → Transition) ⭐
+- 🆕 [**Energy Systems for Swimming**](methodology/energy-systems-swimming.md) — Three fuel tanks (ATP-CP, Lactic, Aerobic) + six training zones ⭐
+- [Periodization Principles](methodology/periodization-principles.md) — Foundation of elite training programs
+- [Periodization Macrocycle](methodology/periodization-macrocycle.md) — Annual planning structure
+- [Writing Workouts](coaches/bob-bowman/writing-workouts.md) — Build up vs. break down progressions
+- [Phelps 10-Day Cycle](coaches/bob-bowman/phelps-10-day-cycle-2003.md) — 6-year development timeline
+
+### Taper
+- [Taper Strategies](methodology/taper-strategies.md) — Systematic reduction for peak performance
+- [Leon Marchand Paris 2024](coaches/bob-bowman/leon-marchand-paris-2024.md) — Blood lactate monitoring, recovery indicators
+- [Phelps 10-Day Cycle](coaches/bob-bowman/phelps-10-day-cycle-2003.md) — Parametric taper (3×100 progression)
+
+### Volume vs. Intensity
+- [Volume-Intensity Balance](methodology/volume-intensity-balance.md) — How to manipulate training variables
+- [Phelps Training 2003](coaches/bob-bowman/phelps-training-2003.md) — High volume with quality
+- [Phelps 10-Day Cycle](coaches/bob-bowman/phelps-10-day-cycle-2003.md) — 8,000-9,500 yards per session
+
+### Energy Systems
+- [Writing Workouts](coaches/bob-bowman/writing-workouts.md) — Work-to-rest ratios (3:1 lactate tolerance, longer neuromuscular)
+
+---
+
+## 🏅 By Swimmer
+
+### Michael Phelps
+- [10-Day Training Cycle (Dec 2003)](coaches/bob-bowman/phelps-10-day-cycle-2003.md) ⭐
+- [Phelps Training 2003](coaches/bob-bowman/phelps-training-2003.md)
+- [Championship Characteristics](coaches/bob-bowman/championship-characteristics.md)
+- [Mastery & Motivation](coaches/bob-bowman/mastery-and-motivation.md) — Post-Beijing struggles
+- 🆕 [Mental Preparation System](mental-training/phelps-mental-preparation-system.md) — ADHD, adversity, visualization ⭐
+- 🆕 [Beijing 2008 Racing Lessons](mental/beijing-2008-racing-lessons.md) — 8 golds, race-by-race insights ⭐
+
+**Key insight:** 365 days/year training for 6 years (2000-2006)
+
+### Leon Marchand
+- [Leon Marchand Paris 2024](coaches/bob-bowman/leon-marchand-paris-2024.md) — 4 gold medals
+- [Coaching Essentials](coaches/bob-bowman/coaching-essentials.md) — Laid-back approach, collaborative coaching
+
+**Key insight:** Self-sufficient, knows who he is, works collaboratively with Bowman
+
+### Reagan Smith
+- [Leon Marchand Paris 2024](coaches/bob-bowman/leon-marchand-paris-2024.md) — Tempo control, Olympic relay
+- [Coaching Essentials](coaches/bob-bowman/coaching-essentials.md) — Painfully serious, go-getter
+
+**Key insight:** Learning to slow tempo for better finishing speed
+
+### Emma McKeon
+- [Writing Workouts](coaches/bob-bowman/writing-workouts.md) — Front-end speed sets
+- Michael Bohl's training philosophy
+
+**Key insight:** 24-highs in training (50m) to enable 24-high first 50 racing
+
+---
+
+## 🔍 Search by Topic
+
+### Butterfly
+- [ASU Butterfly Quality Set](coaches/bob-bowman/asu-butterfly-quality-set.md)
+- [Phelps 10-Day Cycle](coaches/bob-bowman/phelps-10-day-cycle-2003.md) — Stroke & Time (-10 rule)
+- [Grant Hackett Set](coaches/bob-bowman/writing-workouts.md)
+
+### Breaststroke
+- [Phelps 10-Day Cycle](coaches/bob-bowman/phelps-10-day-cycle-2003.md) — Transformation story, underwater work
+- [Writing Workouts](coaches/bob-bowman/writing-workouts.md) — Zac Stubblety-Cook sets (Vince Raleigh)
+
+### Backstroke
+- [Phelps 10-Day Cycle](coaches/bob-bowman/phelps-10-day-cycle-2003.md) — 60×50 backstroke progression
 
 ### Freestyle
-**[`/technique/freestyle/breathing.md`](technique/freestyle/breathing.md)** (6KB)
-- Head moves WITH body (never independently)
-- One goggle in water technique
-- Bow wave breathing mechanics
-- Michael Phelps example (perfect one-goggle breathing)
-- Katie Ledecky over-rotation example
-- Chase Kalisz double-breath intervention story
-- "Checking the weather" correction cue
-- Technical checkpoints & self-assessment
+- [Breathing Mechanics](technique/freestyle/breathing-mechanics.md)
+- [Phelps 10-Day Cycle](coaches/bob-bowman/phelps-10-day-cycle-2003.md) — 6-beat kick transformation
 
-**Coming in Phase 3**:
-- `/technique/freestyle/anatomy.md` - muscle mechanics
-- `/technique/freestyle/drills.md` - progression from 100 Best Drills
-- `/technique/freestyle/fundamentals.md` - science of fast swimming
-- `/technique/butterfly/mechanics.md`
-- `/technique/breaststroke/technique.md`
-- `/technique/backstroke/fundamentals.md`
+### IM
+- [Phelps 10-Day Cycle](coaches/bob-bowman/phelps-10-day-cycle-2003.md) — Training all strokes separately
+- [Leon Marchand Paris 2024](coaches/bob-bowman/leon-marchand-paris-2024.md) — 400 IM strategy
 
 ---
 
-## 🎯 Methodology (NEW - Phase 3)
+## 📖 Complete Page List (37 pages)
 
-**[`/methodology/taper-peaking-strategies.md`](methodology/taper-peaking-strategies.md)** ✨ NEW (12KB)
-- Science of taper (physiological + psychological adaptations)
-- Bob Bowman's taper philosophy (process > outcome, Texas NCAA 2025 case study)
-- Duration guidelines by event (sprint 1-2 weeks, distance 3-4 weeks)
-- Volume reduction protocol (60-70% → 40-50% → 20-30%)
-- Intensity maintenance: THE GOLDEN RULE (reduce volume, maintain intensity)
-- Frequency strategies (don't reduce until final 3-5 days)
-- Psychological taper (athlete concerns, coaching responses, process vs. outcome focus)
-- "Reverse taper" phenomenon (days 3-7 feel worse, then magic)
-- Race week specifics (7 days → race day protocols)
-- Nutrition during taper (carb loading, hydration, race day fueling)
-- Common taper mistakes (reducing intensity too much, not reducing volume enough, etc.)
-- Hubert Kós case study (SECs → NCAAs transformation)
-- Michael Phelps 0.01-second finish (12-year ingrained habit)
-- Individual differences (Leon needs breaks, Michael could go over edge)
-- Mental game (visualization protocols, process thoughts vs. outcome thoughts)
-- Post-taper options (next meet, off-season, long course transition)
+### Coaching Philosophy (3 — NEW)
 
-## 💪 Workouts (17KB | 2 pages)
+### Historical Analysis (3 — NEW from *The 100 Greatest Swimmers*) 🆕
+1. [Championship Traits: Top 100 Swimmers](coaching/championship-traits-top-100-swimmers.md) 🆕 ⭐
+2. [Olympic Medal Patterns Analysis](methodology/olympic-medal-patterns-analysis.md) 🆕 ⭐
+3. [Comparing Eras: Coaching Evolution](coaching/comparing-eras-coaching-evolution.md) 🆕 ⭐
+1. [Athlete-Centered Coaching](coaching-philosophy/athlete-centered-coaching.md) 🆕
+2. [Championship Culture](coaching-philosophy/championship-culture.md) 🆕
+3. [Engaging & Effective Practice](coaching-philosophy/engaging-effective-practice.md) 🆕
 
-### Masters Workouts
-**[`/workouts/masters/progressive-speed-sets.md`](workouts/masters/progressive-speed-sets.md)** (10KB)
+### Coaches (11)
 
-**6 Detailed Workouts Included**:
-1. **Workout #3**: Pyramid Negative Split (2300m) - pacing control
-2. **Workout #9**: Progressive Density 40x50 (2500m) - speed endurance
-3. **Workout #8**: Ascending Ladder (2500m) - aerobic threshold
-4. **Workout #11**: Threshold Intervals (2450m) - lactate tolerance
-5. **Workout #14**: Fast/Easy Contrast (2200m) - speed contrast
-6. **Workout #5**: Kick Progression (2200m) - leg endurance
+**Mark Schubert (3):**
+1. [Mark Schubert: Training Philosophy & Energy Systems](coaches/mark-schubert/training-philosophy-energy-systems.md) 🆕 ⭐
+2. [Mark Schubert: Sample Workouts](coaches/mark-schubert/sample-workouts.md) 🆕 ⭐
 
-**Each workout includes**:
-- Full structure (warmup / main / cool)
-- Key features
-- When to use
-- Coaching notes
-- Variations by ability level
+**Bob Bowman (10):**
+3. [Bob Bowman: Phelps 10-Day Training Cycle](coaches/bob-bowman/phelps-10-day-cycle-2003.md) ⭐
+4. [Bob Bowman: Writing Workouts](coaches/bob-bowman/writing-workouts.md)
+5. [Bob Bowman: Mastery & Motivation](coaches/bob-bowman/mastery-and-motivation.md)
+6. [Bob Bowman: Coaching Essentials](coaches/bob-bowman/coaching-essentials.md)
+7. [Bob Bowman: ASU Butterfly Quality Set](coaches/bob-bowman/asu-butterfly-quality-set.md)
+8. [Bob Bowman: Championship Characteristics](coaches/bob-bowman/championship-characteristics.md)
+9. [Bob Bowman: Phelps Training 2003](coaches/bob-bowman/phelps-training-2003.md)
+10. [Bob Bowman: Leon Marchand Paris 2024](coaches/bob-bowman/leon-marchand-paris-2024.md)
+11. [Bob Bowman: Coaching Philosophy](coaches/bob-bowman-coaching-philosophy.md) 🆕 ⭐
 
-**[`/workouts/masters/sprint-speed-sets.md`](workouts/masters/sprint-speed-sets.md)** ✨ NEW (7KB)
+### Technique (4 — 3 NEW from *Championship Swimming*)
+12. [Freestyle: Breathing Mechanics](technique/freestyle/breathing-mechanics.md)
+13. [**Streamlining & Body Position**](technique/streamlining-body-position.md) 🆕 ⭐
+14. [**Modern Breaststroke Technique**](technique/breaststroke/modern-breaststroke-technique.md) 🆕 ⭐
 
-**30 High-Intensity Sprint Workouts** from Bayside Masters (SCM):
-- Sprint kick focus
-- Underwater sprint work with fins
-- Negative split speed (descending fast finishes)
-- Kick + free sprint combos
-- Stroke-specific sprint progressions
-- Descending sprint freestyle
-- Power + speed combos
-- Maximum velocity training
-- Relay takeover speed
-- Race-pace sprints
-- Progressive sprint builds
-- Threshold to sprint transitions
+### Training (2 — NEW from *Championship Swimming*)
+15. [**Interval Training Basics**](training/interval-training-basics.md) 🆕 ⭐
+16. [**Mental Preparation for Competition**](training/mental-preparation-schubert.md) 🆕 ⭐
 
-**Coaching notes included**:
-- Sprint training principles (full recovery, quality > quantity, race-specific pacing)
-- Common sprint set structures (short 25s, mid 50s, long 75-100s)
-- Integration with training cycle (base → build → peak → taper)
+### Mental Training (5 — 3 NEW from *With Winning in Mind* by Lanny Bassham) 🆕
+17. [**Mental Management for Swim Coaches (Bassham)**](mental-training/mental-management-bassham.md) 🆕 ⭐
+18. [**Mental Rehearsal for Swimming (Bassham)**](mental-training/mental-rehearsal-swimming.md) 🆕 ⭐
+19. [**Performance Journaling & Self-Image Building (Bassham)**](mental-training/performance-journaling-swimming.md) 🆕 ⭐
+20. [**Phelps' Mental Preparation System**](mental-training/phelps-mental-preparation-system.md) ⭐
+21. [**Beijing 2008 Racing Lessons**](mental/beijing-2008-racing-lessons.md) ⭐
 
-**Coming in Phase 4**:
-- `/workouts/masters/aerobic-endurance-sets.md` (12-15 workouts from 85-workout database)
-- `/workouts/masters/im-training-sets.md` (8-10 workouts)
-- `/workouts/masters/threshold-training-sets.md` (10-12 workouts)
-- `/workouts/masters/kick-pull-emphasis-sets.md` (8-10 workouts)
-- `/workouts/masters/stroke-specific-sets.md` (organized by stroke)
+### Total Immersion / Triathletes (2 — NEW from *Triathlon Swimming Made Easy*) 🆕
+22. [**Total Immersion for Triathletes**](training/total-immersion-for-triathletes.md) 🆕 ⭐
+23. [**Swimming Golf & Stroke Length Games**](training/swimming-golf-stroke-length-games.md) 🆕 ⭐
+
+### Meta (3)
+24. [README](README.md)
+25. [STRUCTURE](STRUCTURE.md)
+26. [SOURCES](SOURCES.md)
 
 ---
 
-## 📖 Books (Ready for Phase 3)
-
-### Methodology (4 books prioritized)
-- [ ] Periodization Training for Sports (Bompa) - 114k words
-- [ ] Tapering and Peaking for Optimal Performance - 99k words
-- [ ] Championship Swimming - 54k words
-- [ ] Coaching Swimming Successfully - 74k words
-
-### Technique (4 books prioritized)
-- [ ] Swimming Anatomy - 33k words
-- [ ] 100 Best Swimming Drills - 60k words
-- [ ] Swimming Fastest (Maglischo) - needs extraction
-- [ ] Fundamentals of Fast Swimming - 107k words
-
-### Mental/Psychology (4 books prioritized)
-- [ ] Peak - 116k words
-- [ ] Mind Gym - 47k words
-- [ ] With Winning in Mind - 41k words
-- [ ] Relentless - 65k words
-
-### Racing/Competition (2 books prioritized)
-- [ ] Open Water Swimming - 99k words
-- [ ] Championship results (NCAA 2025, Worlds 2024/2025, Paris Olympics)
-
-### Coaching (4 books prioritized)
-- [ ] Conscious Coaching - 88k words
-- [ ] The Language of Coaching - 111k words
-- [ ] Legacy (Phil Jackson) - 41k words
-- [ ] The Score Takes Care of Itself (Bill Walsh) - 98k words
-
-**57 total books extracted**, ready for targeted processing
+## 📈 Stats
+- **Total pages:** 37 (✅ +3 from *With Winning in Mind* by Lanny Bassham)
+- **Total content:** ~628 KB
+- **Coaches covered:** Doc Counsilman, Bob Bowman, Mark Schubert, Bill Sweetenham, Terry Laughlin (Total Immersion), Lanny Bassham (Mental Management)
+- **Swimmers featured:** Top 100 all-time (Phelps, Spitz, Ledecky, Caulkins, Egerszegi, etc.), Marchand, Summer McIntosh, Reagan Smith, Emma McKeon, Chase Kalisz, John Kinsella, Mark Spitz, Gary Hall, Shane Gould
+- **Olympic medals referenced:** 365+ medals analyzed (Top 100 swimmers), Phelps alone: 28 medals (23 gold), Bassham: 1976 gold medal (shooting)
+- **Era coverage:** 1896 Athens Olympics → 2016 Rio Olympics (120 years)
+- **Training science:** Counsilman's 4 methods (overdistance, interval, repetition, sprint), underwater filming innovation, Total Immersion efficiency-first methodology, Mental Management (Triad State, directive affirmations, mental programs)
 
 ---
 
-## 🗂️ Directory Structure
-
-```
-/wiki/
-├── INDEX.md (this file)
-├── DOC_PHASE2_FINAL_REPORT.md
-├── DOC_PHASE2_PROGRESS.md
-│
-├── coaches/
-│   └── bob-bowman/
-│       ├── coaching-philosophy.md       ✅ 11KB
-│       ├── training-philosophy.md       ✅ 14KB
-│       ├── leon-marchand-training.md    ✅ 12KB
-│       └── michael-phelps-lessons.md    ✅ 13KB
-│
-├── technique/
-│   ├── freestyle/
-│   │   └── breathing.md                 ✅ 6KB
-│   ├── butterfly/                       📁 ready for Phase 3
-│   ├── breaststroke/                    📁 ready for Phase 3
-│   └── backstroke/                      📁 ready for Phase 3
-│
-├── workouts/
-│   └── masters/
-│       └── progressive-speed-sets.md    ✅ 10KB
-│
-├── methodology/                         📁 ready for Phase 3
-├── mental/                              📁 ready for Phase 3
-├── racing/                              📁 ready for Phase 3
-└── coaching/                            📁 ready for Phase 3
-```
-
-**Legend**:
-- ✅ = Complete (Phase 2)
-- 📁 = Directory created, content ready for Phase 3
+## 🚀 Coming Soon
+- More Bob Bowman transcripts (10 remaining)
+- Book extracts (periodization, taper, technique)
+- Workout library (85 masters workouts)
+- Mental training protocols
+- Racing strategy breakdowns
 
 ---
 
-## 🔍 Quick Navigation by Topic
+**Last updated:** 2026-04-06 (Added 3 pages from *With Winning in Mind* by Lanny Bassham)  
+**Built by:** DOC (Swimnerd Wiki Builder)  
+**For:** Nate Tschohl / Swimnerd
 
-### Coaching Philosophy & Evolution
-- [Bob Bowman: Coaching Philosophy](coaches/bob-bowman/coaching-philosophy.md)
-- [Bob Bowman: Training Philosophy](coaches/bob-bowman/training-philosophy.md)
-
-### Elite Athlete Development
-- [Bob Bowman: Michael Phelps Lessons](coaches/bob-bowman/michael-phelps-lessons.md)
-- [Bob Bowman: Leon Marchand Training](coaches/bob-bowman/leon-marchand-training.md)
-
-### Technique Fundamentals
-- [Freestyle Breathing](technique/freestyle/breathing.md)
-
-### Practical Workouts
-- [Masters: Progressive Speed Sets](workouts/masters/progressive-speed-sets.md)
-
----
-
-## 📊 Content Statistics
-
-### Phase 3 Complete (Current)
-- **Pages created**: 14 core content pages
-- **Total content**: 188KB (~70,000+ words)
-- **Bob Bowman**: 7 pages, 103KB
-- **Methodology**: 1 page, 12KB
-- **Technique**: 1 page, 6KB
-- **Workouts**: 2 pages, 17KB
-- **Reports**: 3 tracking pages
-
-### Source Material Processed
-- **Bob Bowman transcripts**: 5 of 9 major transcripts (3 in Phase 3: Golden Rules, Texas NCAA, Coaching Mastermind)
-- **Workouts database**: 85 workouts catalogued (30 sprint workouts documented in Phase 3)
-- **Books synthesized**: Taper methodology from best practices + Bob Bowman examples
-
-### Quality Metrics
-- **100% sourced** - every claim cited with transcript/source
-- **100% actionable** - specific sets, times, techniques, coaching notes
-- **Zero jargon** - accessible to all coaching levels
-- **Real examples** - Phelps, Marchand, Kalisz, Ledecky throughout
-
----
-
-## 🎯 Phase 4 Roadmap (Future Expansion)
-
-### Priority 1: Complete Bob Bowman Personal Journey (2 remaining transcripts)
-1. Unfiltered Waters interviews (combine both) - career evolution, ASU→Texas transition
-2. Additional deep dives - toolbox evolution, relationship stories
-
-**Estimated pages**: 2-3 more  
-**Estimated time**: 2-3 hours
-
-### Priority 2: Top 10 Books → Wiki Pages
-**Methodology**:
-- Periodization Training → methodology/periodization.md
-- Tapering and Peaking → methodology/taper-peaking.md
-
-**Technique**:
-- Swimming Anatomy → technique/anatomy.md
-- 100 Best Drills → technique/drills.md
-
-**Mental**:
-- Peak → mental/peak-performance.md
-- Mind Gym → mental/mental-training.md
-
-**Coaching**:
-- Conscious Coaching → coaching/philosophy.md
-- Language of Coaching → coaching/communication.md
-
-**Estimated pages**: 8-10  
-**Estimated time**: 4-5 hours
-
-### Priority 3: Categorize Remaining Workouts (79 more)
-- Aerobic/endurance sets
-- Sprint/speed sets
-- IM training sets
-- Stroke-specific sets
-- Kick-focused sets
-- Pull-focused sets
-
-**Estimated pages**: 6  
-**Estimated time**: 2-3 hours
-
-### Priority 4: Cross-Link & Polish
-- Add related links to all pages
-- Create topic tags
-- Build search-friendly structure
-- Final quality pass
-
-**Estimated time**: 1 hour
-
-**Total Phase 3 estimate**: 9-12 hours to complete wiki
-
----
-
-## 🏆 Quality Standards (Maintained Throughout)
-
-### ✅ Actionable
-- Specific sets with times/distances/intervals
-- Exact techniques with cues and checkpoints
-- Real examples from elite athletes
-- Coaching interventions that produced results
-
-### ✅ Sourced
-- Every claim cited with source
-- Transcript date and speaker identified
-- Context provided for quotes
-- Direct quotes preserved accurately
-
-### ✅ Cross-Referenced
-- Internal links between related topics
-- Bob Bowman pages reference each other
-- Technique pages reference coaching philosophy
-- Workouts reference training principles
-
-### ✅ Coach-Friendly
-- No academic jargon
-- Bullet points, tables, clear structure
-- Scannable format
-- Immediate applicability
-
-### ✅ Real Examples
-- Michael Phelps (extensive)
-- Leon Marchand (detailed)
-- Chase Kalisz (specific interventions)
-- Katie Ledecky (technique examples)
-- Reagan Smith, Hubie Kalisz, Luke Hobson, Shane Ryan
-
----
-
-## 🔗 External Resources
-
-### Source Material Locations
-- Bob Bowman transcripts: `/swimnerd/bob_bowman_data/Transcripts/`
-- Books (extracted): `/swimnerd/books_text_extracted/`
-- Workouts database: `/swimnerd/masters_workouts_parsed/all_workouts.json`
-- Book summary: `/swimnerd/books_text_extracted/extraction_summary.json`
-
-### Related Swimnerd Resources
-- Swimnerd Live (scoreboard/timing software)
-- Swimnerd AI (coach-style embeddings)
-- Inside with Brett Hawke (1,085 interviews)
-- Night Swim podcast
-- SwimSpam newsletter
-
----
-
-## 📝 How to Use This Wiki
-
-### For Coaches
-1. **Start with philosophy** - understand the WHY behind methods
-2. **Drill into technique** - get specific cues and corrections
-3. **Grab workouts** - use ready-made sets with coaching notes
-4. **Adapt to your athletes** - every page includes variations
-
-### For Athletes
-1. **Learn mental training** - visualization, goal setting, process focus
-2. **Understand technique** - why one goggle in water matters
-3. **See the process** - 20-year journeys (Phelps), long-term vision
-4. **Get inspired** - real stories of excellence
-
-### For Self-Study
-1. **Read across topics** - coaching → technique → workouts
-2. **Follow the examples** - Michael, Leon, Chase stories teach principles
-3. **Apply progressively** - start with one technique, one workout
-4. **Track your growth** - measure against the standards
-
----
-
-## 🎓 Featured Content Highlights
-
-### Must-Read Pages
-1. **[Bob Bowman: Coaching Philosophy](coaches/bob-bowman/coaching-philosophy.md)** - The evolution of a world-class coach
-2. **[Michael Phelps Lessons](coaches/bob-bowman/michael-phelps-lessons.md)** - 4 factors of excellence, 20-year journey
-3. **[Leon Marchand Training](coaches/bob-bowman/leon-marchand-training.md)** - Post-Olympic management done right
-4. **[Freestyle Breathing](technique/freestyle/breathing.md)** - One goggle in water, bow wave breathing
-
-### Best Stories
-- **Christmas Training** (Michael Phelps): 52 extra days/year psychological advantage
-- **0.01 Second Finish** (Phelps vs. Čavić): 12 years of practice = $37k horse farm
-- **Chase Kalisz Double Breath**: One decisive intervention, never did it again
-- **Leon's 3:07 Dream** (Michael Phelps): Visualization so powerful it becomes prophetic
-
-### Immediate Application
-- **Progressive Speed Sets**: 6 ready-to-use masters workouts
-- **Freestyle Breathing Cues**: "One goggle in water" technique
-- **Practice Structure**: 30% warmup / 50% main / 20% post
-- **8/10 Principle**: Consistency over perfection
-
----
-
-## 🚀 Future Expansion (Beyond Phase 3)
-
-### Potential Topics
-- Race strategy & pacing
-- Strength training for swimmers
-- Nutrition & recovery
-- Championship meet preparation
-- Age group progression
-- Injury prevention
-- Open water specific techniques
-- Equipment reviews & recommendations
-
-### Community Contributions
-- Guest coach insights
-- Athlete testimonials
-- Workout variations
-- Success stories
-- Q&A sections
-
----
-
-## 💬 Feedback & Contributions
-
-This wiki is a living document. As new content is created:
-- Pages will be cross-referenced
-- Examples will be added
-- Techniques will be refined
-- Workouts will be tested and validated
-
-**Goal**: Become the most comprehensive, actionable swimming coaching knowledge base available.
-
----
-
-**Last updated**: 2026-04-05 by DOC  
-**Next update**: Phase 3 expansion  
-**Questions**: See `/wiki/DOC_PHASE2_FINAL_REPORT.md` for detailed progress report
-
-**🏊‍♂️ Swim Fast. Coach Better. Learn Always. 💪**
+🏊‍♂️ **Dive in and explore!**

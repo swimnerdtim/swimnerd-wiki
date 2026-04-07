@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { marked } from 'marked';
 
-const wikiDir = '../wiki';
+const wikiDir = './wiki';
 const outputFile = './src/wikiData.json';
 
 const categoryMap = {

@@ -55,7 +55,27 @@ The complete overview of Cam's approach:
 
 ---
 
-### 2. [Technique Deep Dive](./technique.md)
+### 2. [The McEvoy Method Explained](./mcevoy-method-explained.md)
+**What makes this approach unique**
+
+Deep dive into the revolutionary training method:
+- Core philosophy: race-pace or faster only
+- The volume revolution (98% reduction vs traditional)
+- What gets eliminated vs emphasized
+- McEvoy Method vs USRPT (key differences)
+- Race specificity (50m freestyle only)
+- Technology integration (1080 Sprint)
+- Strength training component
+- Who this is for (and who it's NOT for)
+- Common misconceptions
+- Implementation considerations
+
+**Key insight:**
+> "If it's not race pace or faster, it's not in the program."
+
+---
+
+### 3. [Technique Deep Dive](./technique.md)
 **The secret sauce**
 
 How Cam developed Olympic-gold technique:
@@ -72,7 +92,43 @@ How Cam developed Olympic-gold technique:
 
 ---
 
-### 3. [Resistance Training Protocols](./resistance-training.md)
+### 4. [Weekly Training Breakdown](./weekly-training-breakdown.md)
+**Inside a typical training week**
+
+Detailed look at Cam's actual weekly sessions:
+- Monday pool session structure (sprint speed work)
+- Tuesday gym session (resistance training)
+- Session metrics and tracking
+- Training partners and coaching staff
+- The Queensland Academy environment
+- Recovery protocols
+- Volume context (1,500m/week vs 70,000m traditional)
+
+**Eye-opening stat:**
+> McEvoy's weekly volume is less than most elite swimmers do in a single warm-up.
+
+---
+
+### 5. [Queensland Academy Training](./queensland-academy-training.md)
+**The facility and technology behind the method**
+
+Inside the training base:
+- Queensland Academy of Sport facility overview
+- 1080 Sprint resistance system
+- Performance tracking technology
+- Training philosophy at QAS
+- Typical top-speed session structure
+- Training block periodization
+- Why a small 4-lane pool works
+- Technology as force multiplier
+- Recovery integration
+
+**The QAS advantage:**
+> "Technology and methodology can overcome facility size limitations."
+
+---
+
+### 6. [Resistance Training Protocols](./resistance-training.md)
 **The bridge from gym to pool**
 
 Complete guide to resistance work:
@@ -90,7 +146,7 @@ Complete guide to resistance work:
 
 ---
 
-### 4. [Tim Lane Partnership](./tim-lane-partnership.md)
+### 7. [Tim Lane Partnership](./tim-lane-partnership.md)
 **The relationship that made it possible**
 
 The revolutionary coach-athlete dynamic:
@@ -106,7 +162,7 @@ The revolutionary coach-athlete dynamic:
 
 ---
 
-### 5. [Paris 2024 Olympic Journey](./paris-2024.md)
+### 8. [Paris 2024 Olympic Journey](./paris-2024.md)
 **The complete story**
 
 From comeback to gold:

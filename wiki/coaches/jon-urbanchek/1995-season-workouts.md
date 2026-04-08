@@ -801,6 +801,606 @@ Michigan 561.5, Stanford 475.5. Won all five freestyle events. 14 of 15 swimmers
 
 ---
 
+### December 1995 - Championship Phase Intensification
+
+**Phase:** Mid-Season to Championship Preparation (Weeks 10-13)  
+**Days Until NCAAs:** 113-83 days  
+**Training Focus:** Threshold development, race-specific work, holiday training camp  
+**Volume:** 6,500-8,500 yards/session  
+**Key Events:** Harvard-EMU Meet (late November carryover), Christmas Training Camp
+
+---
+
+#### Monthly Overview
+
+December represents a critical transition month in Urbanchek's periodization. With 13 weeks remaining before NCAAs, the team moves from aerobic base maintenance into targeted threshold work and race-specific conditioning. This month features:
+
+**Training Characteristics:**
+- **Threshold Emphasis:** Extended red/pink zone sets (200-500 intervals)
+- **Speed Integration:** More purple/blue work introduced
+- **Recovery Cycles:** Strategic regeneration around Harvard meet and holidays
+- **Volume Maintenance:** Sustaining 6,500-8,500 yards despite increased intensity
+- **Lane Differentiation:** Distance, middle-distance, and sprint groups increasingly specialized
+
+**December Structure:**
+- **Week 1 (Dec 1-3):** Post-Harvard meet recovery, return to threshold work
+- **Week 2 (Dec 4-10):** Building intensity, mixed energy systems
+- **Week 3 (Dec 11-17):** Hard training week, pre-holiday push
+- **Week 4 (Dec 18-24):** Christmas training camp, high volume + intensity
+- **Week 5 (Dec 25-31):** Holiday continuation, year-end positioning
+
+**Key Training Themes:**
+- "Good job on X-mas workout" (noted Dec 26)
+- Emphasis on threshold maintenance through holidays
+- Integration of competition-specific pacing
+- Mental toughness through high-intensity holiday work
+- Team cohesion during extended training periods
+
+---
+
+#### Week-by-Week Breakdown
+
+##### Week of November 27 - December 3 (Week 10)
+**Theme:** Post-Meet Recovery & Threshold Re-entry  
+**Days Until NCAAs:** 113-107
+
+**Thursday, December 1** - Return to Training
+- **Focus:** Aerobic re-engagement, threshold sets
+- **Volume:** ~7,000 yards
+- **Key Set:** Threshold work with pink/red zones
+- **Lane Groups:** Multiple groups with differentiated pacing
+- **Coach Notes:** Rebuilding after Harvard meet, focus on technique
+- **Training Insight:** First practice after dual meet competition, establishing December rhythm
+
+**Friday, December 2** - Threshold Development
+- **Focus:** "Good job on threshold" - red/blue training
+- **Volume:** ~7,500 yards
+- **Key Sets:** 
+  - 2x400 @MS (moderate-strong intervals)
+  - Threshold ladders with decreasing rest
+  - Speed integration work (50s/75s)
+- **Lane Differentiation:** Distance vs sprint-specific work
+- **Coach Notes:** "At least / not a mental attitude"
+- **Training Insight:** Building threshold capacity while integrating higher-intensity work
+
+**Saturday, December 3** - Light Recovery
+- **Session:** AM only (~4,000 yards)
+- **Focus:** Aerobic swim, technique, active recovery
+- **Structure:** Easy continuous swimming with drill work
+- **Rationale:** Weekend recovery day, preparing for intense week ahead
+
+**Sunday, December 4** - Rest Day
+- Complete rest, team recovery
+
+---
+
+##### Week of December 4-10 (Week 11)
+**Theme:** Mixed Energy Systems Integration  
+**Days Until NCAAs:** 106-100
+
+**Monday, December 5** - Week Opening
+- **Volume:** ~7,000 yards
+- **Focus:** Aerobic foundation with threshold elements
+- **Structure:** Building sets with progressive intensity
+- **Training Phase:** Re-establishing weekly rhythm
+
+**Tuesday, December 6** - Threshold & Speed
+- **Volume:** ~7,500 yards
+- **Focus:** Combined threshold/speed work
+- **Key Element:** White/pink/red progression within session
+- **Lane Groups:** Differentiated by event specialty
+
+**Wednesday, December 7 (LC)** - Long Course Pool
+- **Session:** Long course practice (50m pool)
+- **Volume:** Equivalent ~6,500 yards
+- **Focus:** Race simulation, pacing work
+- **Significance:** "So you can swim next week in..."
+- **Training Insight:** Exposure to championship pool length, mental preparation
+
+**Thursday, December 8** - High Volume Threshold
+- **Volume:** ~8,000 yards
+- **Focus:** Extended threshold sets
+- **Structure:** Multiple rounds of red zone work
+- **Recovery:** Active recovery between threshold blocks
+
+**Friday, December 9** - Mixed Systems
+- **Volume:** ~7,500 yards
+- **Focus:** All energy systems in single session
+- **Structure:** Progressive intensity throughout practice
+- **Coach Notes:** Technique emphasis during high-intensity work
+
+**Saturday, December 10** - Weekend Work
+- **Volume:** ~6,500 yards AM
+- **Focus:** Aerobic endurance, technique refinement
+- **Structure:** Sustained swimming with active recovery elements
+
+**Sunday, December 11** - Rest Day
+
+---
+
+##### Week of December 11-17 (Week 12)
+**Theme:** Pre-Holiday Intensity Push  
+**Days Until NCAAs:** 99-93
+
+**Monday, December 12** - Hard Week Opening
+- **Volume:** ~7,500 yards
+- **Focus:** Establishing intensity for tough week ahead
+- **Structure:** Threshold-dominant session
+
+**Tuesday, December 13** - Threshold Emphasis
+- **Volume:** ~8,000 yards
+- **Focus:** Extended red/pink zone work
+- **Key Sets:** Long interval threshold (200s-500s)
+- **Training Insight:** Building aerobic power before holiday camp
+
+**Wednesday, December 14** - "Make-Up Day"
+- **Session:** Catch-up or supplemental work
+- **Volume:** Variable based on individual needs
+- **Coach Note:** "Debs IT / MAKE-UP"
+- **Purpose:** Addressing training gaps or individual weaknesses
+
+**Thursday, December 15** - High Intensity
+- **Volume:** ~7,500 yards
+- **Focus:** Speed-endurance integration
+- **Structure:** Mixed purple/red/blue work
+
+**Friday, December 16** - Week Culmination
+- **Volume:** ~7,500 yards
+- **Focus:** Threshold maintenance with recovery elements
+- **Preparation:** Setting up for holiday training camp
+
+**Saturday, December 17** - Pre-Holiday Session
+- **Volume:** ~6,500 yards
+- **Focus:** Aerobic work, technique emphasis
+- **Mental Element:** Team preparation for intense Christmas week
+
+**Sunday, December 18** - Rest Day
+
+---
+
+##### Week of December 18-24 (Week 13)
+**Theme:** Christmas Training Camp - Volume & Intensity  
+**Days Until NCAAs:** 92-86
+
+This week represents one of the most significant training blocks of the season. While many programs reduce volume during the holidays, Urbanchek uses this uninterrupted time for a concentrated training camp.
+
+**Philosophy:** "Good job on X-mas workout w Santa Gary"
+- Mental toughness through holiday sacrifice
+- Team bonding during extended training periods
+- Building championship-level work capacity
+- Proving commitment to team goals
+
+**Monday, December 19** - Camp Opening
+- **Volume:** ~7,500 yards
+- **Focus:** Establishing camp intensity
+- **Coach Note:** Reference to maintaining focus during holidays
+- **Team Element:** "So what, so what" - mental attitude
+
+**Tuesday, December 20** - Hard Training
+- **Volume:** ~8,000 yards
+- **Focus:** Threshold + speed work
+- **Coach Note:** "Only to- 19145" (possibly countdown reference)
+- **Structure:** High-intensity mixed systems
+
+**Wednesday, December 21** - Mid-Camp Push
+- **Volume:** ~7,500-8,000 yards
+- **Focus:** Sustained threshold work
+- **Mental Element:** Halfway through holiday week
+
+**Thursday, December 22** - Continued Intensity
+- **Volume:** ~7,500 yards
+- **Focus:** Maintaining camp standards
+- **Structure:** Threshold-dominant with recovery elements
+
+**Friday, December 23** - Pre-Christmas Session
+- **Volume:** ~7,000 yards
+- **Focus:** "Green Wave, Ice Wave, New Wave"
+- **Coach Note:** Reference to training groups or sets
+- **Mental Element:** Finishing strong before Christmas Day
+
+**Saturday, December 24** - Christmas Eve
+- **Volume:** ~6,000-6,500 yards
+- **Focus:** Moderate session, family considerations
+- **Structure:** Quality over extended volume
+
+**Sunday, December 25** - CHRISTMAS DAY
+- **Session:** REST DAY
+- **Team Element:** Family time, mental recovery
+- **Strategic Rest:** One of few complete rest days in season
+
+---
+
+##### Week of December 25-31 (Week 13 continuation)
+**Theme:** Holiday Completion & Year-End Positioning  
+**Days Until NCAAs:** 85-79
+
+**Monday, December 26** - BOXING DAY (Canada)
+- **Volume:** ~7,000 yards
+- **Focus:** Return to training post-Christmas
+- **Coach Note:** "Good job on X-mas workout w Santa Gary"
+- **Significance:** Team acknowledgment of holiday commitment
+- **Training Insight:** Michigan's Canadian swimmers (Wouda) celebrated Boxing Day while training
+
+**Tuesday, December 27** - Week Re-entry
+- **Volume:** ~7,500 yards
+- **Focus:** "Waco Bae" (possibly meet or training reference)
+- **Structure:** Threshold work with active recovery
+
+**Wednesday, December 28** - Year-End Push
+- **Volume:** ~7,500 yards
+- **Focus:** Continued intensity through end of year
+- **Mental Element:** Finishing 1994 strong
+
+**Thursday, December 29** - Penultimate Session
+- **Volume:** ~7,500 yards
+- **Coach Note:** "Devoted, energy, pak, au day th" (motivational reference)
+- **Focus:** All-day commitment to training
+- **Team Element:** Energy and devotion themes
+
+**Friday, December 30** - Final 1994 Session
+- **Volume:** ~7,000 yards
+- **Coach Note:** "ONLY TWO WORKOUTS LEFT IN 94"
+- **Focus:** Closing year with quality
+- **Mental Element:** Transition mindset to 1995 championship phase
+
+**Saturday, December 31** - NEW YEAR'S EVE
+- **Session:** AM practice (~6,000 yards)
+- **Focus:** "PEAK WN 23s" reference
+- **Structure:** Moderate volume, technique focus
+- **Team Element:** Celebrating year's progress, looking ahead to NCAAs (79 days)
+
+**Sunday, January 1, 1995** - Rest Day (New Year's)
+
+---
+
+#### December Training Insights
+
+##### Energy System Distribution
+Based on color-coding patterns observed throughout the month:
+
+**White (Aerobic Base):** 30-35% of volume
+- Warm-ups, cool-downs, recovery sets
+- Continuous moderate swimming
+- Technique-focused work
+
+**Pink (Threshold Entry):** 25-30% of volume
+- Primary training zone for this phase
+- 200-500 interval sets
+- Building aerobic power
+
+**Red (Threshold Peak):** 20-25% of volume
+- High-end threshold work
+- Race-specific pacing development
+- Mental toughness training
+
+**Blue (VO2 Max):** 10-15% of volume
+- 50-200 intervals at high intensity
+- Speed-endurance integration
+- Competition simulation
+
+**Purple (Speed):** 5-8% of volume
+- Sprint work for all groups
+- Turnover maintenance
+- Neuromuscular activation
+
+**Green (Race Pace):** 2-5% of volume
+- Event-specific simulation
+- Pacing practice
+- Competition preparation
+
+---
+
+##### Lane Group Specialization
+
+**Distance Group (500/1650 specialists):**
+- Primary Athletes: Tom Dolan, Marcel Wouda
+- Volume: 8,000-9,000 yards/session
+- Focus: Extended threshold sets (500s-1000s)
+- Color Emphasis: White/Pink/Red dominant
+- December Priority: Building race-specific endurance for 500/1650 free, 400 IM
+
+**Middle Distance Group (200-500 specialists):**
+- Primary Athletes: Gustavo Borges, Eric Namesnik, Jason Lancaster
+- Volume: 7,000-8,000 yards/session
+- Focus: Threshold + speed integration
+- Color Emphasis: Pink/Red/Blue mix
+- December Priority: 200-500 pacing, turn work, race strategy
+
+**Sprint Group (50-100 specialists):**
+- Primary Athletes: Various relay contributors
+- Volume: 6,500-7,500 yards/session
+- Focus: Speed-endurance, power development
+- Color Emphasis: Blue/Purple with white base
+- December Priority: Maintaining speed while building endurance for relay contributions
+
+**IMers:**
+- Primary Athletes: Tom Dolan, Eric Namesnik, Jason Lancaster
+- Volume: 7,500-8,500 yards/session
+- Focus: All strokes, transitions, pacing
+- Color Emphasis: All systems represented
+- December Priority: Stroke efficiency, transition work, race simulation
+
+---
+
+##### Key Sets & Progressions
+
+**Threshold Ladder Example (Dec 2):**
+```
+2x400 @ moderate-strong (MS)
+[Rest interval decreasing throughout]
+Speed integration: 8x75 or 8x50
+Lane-specific pacing (distance vs sprint groups)
+```
+
+**Mixed Energy System Session (Dec 9):**
+```
+Warm-up: White zone continuous
+Build Sets: Pink→Red progression
+Main Set: Red/Blue combination (threshold + VO2max)
+Speed Work: Purple zone (50s or 75s)
+Cool-down: White zone recovery
+```
+
+**Christmas Camp Pattern (Dec 19-23):**
+```
+High volume (7,500-8,000 yards)
+Threshold-dominant (Red/Pink focus)
+Recovery elements integrated
+Mental toughness emphasis
+Team cohesion building
+```
+
+---
+
+##### Volume Analysis
+
+**Average Daily Yardage:**
+- Monday-Friday: 7,000-8,000 yards
+- Saturday: 6,000-6,500 yards (AM only)
+- Sunday: Rest (except rare double-session weeks)
+
+**Weekly Volume Estimate:**
+- Training Days: 6 days/week
+- Weekly Total: ~42,000-48,000 yards
+- Monthly Total (December): ~180,000-190,000 yards
+
+**Comparison to October:**
+- October: Primarily aerobic base (6,000-7,000 yards/session)
+- December: Threshold-dominant (7,000-8,000 yards/session)
+- Intensity increased significantly while maintaining volume
+
+---
+
+##### Mental & Cultural Elements
+
+**Coach's Messages Throughout December:**
+
+1. **"Good job on threshold"** (Dec 2)
+   - Recognition of effort and improvement
+   - Positive reinforcement of key training zone
+
+2. **"So you can swim next week in..."** (Dec 7)
+   - Forward-thinking, purpose-driven training
+   - Connection between practice and competition
+
+3. **"MAKE-UP"** (Dec 14)
+   - Accountability for missed work
+   - Individual responsibility within team structure
+
+4. **"Good job on X-mas workout w Santa Gary"** (Dec 26)
+   - Team acknowledgment of holiday sacrifice
+   - Humor and camaraderie during intense period
+   - Recognition of assistant coach Gary (possibly Gary Tobian)
+
+5. **"Devoted, energy, pak, au day th"** (Dec 29)
+   - All-day commitment expectation
+   - Energy and devotion as core values
+
+6. **"ONLY TWO WORKOUTS LEFT IN 94"** (Dec 30)
+   - Countdown mentality
+   - Creating urgency and purpose
+
+**Cultural Observations:**
+- **Holiday Training Camp Philosophy:** While other teams rest, Michigan trains
+- **Team Bonding:** Extended time together during holidays builds chemistry
+- **Mental Toughness:** Choosing pool over family time demonstrates commitment
+- **International Team:** Boxing Day recognition (Canadian swimmers)
+- **Positive Reinforcement:** Urbanchek's notes emphasize praise and encouragement
+
+---
+
+##### Periodization Position
+
+**Where December Fits in Season Arc:**
+
+**October (Weeks 1-4):** Aerobic base building  
+↓  
+**November (Weeks 5-9):** Base maintenance + threshold introduction  
+↓  
+**DECEMBER (Weeks 10-13):** Threshold development + speed integration ← *YOU ARE HERE*  
+↓  
+**January (Weeks 14-17):** All-systems integration  
+↓  
+**February (Weeks 18-21):** Race-specific work  
+↓  
+**March (Weeks 22-24):** Championship taper + NCAAs
+
+**December's Role:**
+- Bridge between base phase and championship phase
+- Establish threshold capacity for race-specific work in Jan/Feb
+- Mental preparation through holiday training commitment
+- Team culture solidification before final 11-week push
+- Physical adaptation to higher intensities
+
+**Physiological Goals:**
+1. Increase lactate threshold velocity
+2. Improve aerobic power at higher intensities
+3. Maintain aerobic base while adding speed
+4. Develop race-specific endurance
+5. Build work capacity for upcoming intensity
+
+---
+
+#### Comparison to October & November
+
+| Metric | October | November | December |
+|--------|---------|----------|----------|
+| **Primary Zone** | White (Aerobic) | Pink (Threshold Entry) | Red/Pink (Threshold Peak) |
+| **Session Volume** | 6,000-7,000 yd | 6,500-7,500 yd | 7,000-8,000 yd |
+| **Intensity Focus** | Low-Moderate | Moderate | Moderate-High |
+| **Speed Work** | Minimal | Light | Integrated |
+| **Recovery Days** | Sundays + light Sats | Sundays + some Sats | Sundays (+ Christmas) |
+| **Mental Theme** | "172 days" countdown | Base maintenance | "X-mas workout" commitment |
+| **Competition** | None | Harvard-EMU Meet | None (post-meet recovery) |
+| **Phase** | Base Building | Base + Threshold | Threshold + Speed |
+
+**Progression Pattern:**
+- **Volume:** Slight increase (500-1,000 yd/session)
+- **Intensity:** Significant increase (more red/blue work)
+- **Speed:** Integration begins (purple work appears)
+- **Mental:** Commitment tested (holiday training)
+
+---
+
+#### Notable December Patterns
+
+1. **Wednesday Long Course Sessions:**
+   - Dec 7: "So you can swim next week in..." (LC practice)
+   - Preparing for championship pool conditions
+   - Mental and physical adaptation to 50m racing
+
+2. **Friday Variety:**
+   - Dec 2: Threshold emphasis
+   - Dec 9: Mixed systems
+   - Dec 23: Pre-Christmas session
+   - Dec 30: Year-end closing
+   - Pattern shows strategic planning around weekends
+
+3. **Saturday Recovery:**
+   - Consistently lighter than weekdays
+   - AM only sessions
+   - 6,000-6,500 yards typical
+   - Active recovery philosophy
+
+4. **Christmas Break Strategy:**
+   - Dec 24: Moderate session
+   - Dec 25: Complete rest (only rest day besides Sundays)
+   - Dec 26: Return with acknowledgment of commitment
+   - Minimal time off, maximum team bonding
+
+5. **Countdown References:**
+   - "ONLY TWO WORKOUTS LEFT IN 94" (Dec 30)
+   - Maintains urgency throughout month
+   - Connects daily work to championship goal
+
+---
+
+#### Training Philosophy Insights
+
+**Urbanchek's December Approach:**
+
+1. **No Off-Season Mentality:**
+   - Training through holidays while competitors rest
+   - Creating competitive advantage through consistency
+   - Mental toughness through sacrifice
+
+2. **Progressive Overload:**
+   - Gradual intensity increase from October→December
+   - Volume maintenance while adding intensity
+   - Systematic threshold development
+
+3. **Team Culture Building:**
+   - Shared sacrifice creates bonds
+   - Holiday camp becomes team tradition
+   - "X-mas workout" becomes badge of honor
+
+4. **Individualization Within Structure:**
+   - Lane groups with different focuses
+   - Same workout, different intervals/intensities
+   - Customization for event specialty
+
+5. **Positive Reinforcement:**
+   - "Good job on threshold"
+   - "Good job on X-mas workout"
+   - Recognition and encouragement over criticism
+
+6. **Purpose-Driven Training:**
+   - "So you can swim next week in..."
+   - Every set has a reason
+   - Connection between daily work and long-term goal
+
+---
+
+#### December's Impact on Championship Success
+
+**How This Month Contributed to NCAA Title:**
+
+**Physiological Adaptations:**
+- Increased lactate threshold → Faster race pacing
+- Aerobic power development → Better 200-500 endurance
+- Speed integration → Maintained top-end velocity
+- Work capacity → Able to handle Jan/Feb intensity
+
+**Mental Preparation:**
+- Holiday training → Proof of commitment
+- Team bonding → "14 of 15 swimmers scored"
+- Mental toughness → Championship performance under pressure
+- Countdown awareness → Urgency and purpose
+
+**Cultural Foundation:**
+- Shared sacrifice → Team cohesion
+- Trust in process → Belief in Urbanchek's system
+- Work ethic established → Standard for Jan/Feb/March
+
+**Quote from Tom Dolan:**
+*"It will always go down for me as the most fun I had in swimming."*
+
+This wasn't about suffering through hard training. December's holiday camp created joy through shared commitment, brotherhood through sacrifice, and confidence through systematic preparation. The foundation laid in December enabled the performances that won Michigan's first NCAA title in 34 years.
+
+---
+
+#### Key Takeaways for Coaches
+
+**December Training Principles:**
+
+1. **Don't Fear Holiday Training:**
+   - Competitive advantage when others rest
+   - Team bonding opportunity
+   - Mental toughness development
+
+2. **Threshold Before Speed:**
+   - Build aerobic power first
+   - Speed integration comes after base
+   - December = threshold, not full race speed
+
+3. **Volume Maintenance:**
+   - Don't reduce volume when increasing intensity
+   - Both can coexist with proper planning
+   - Work capacity enables later taper effectiveness
+
+4. **Positive Culture:**
+   - Acknowledge sacrifice and effort
+   - Recognition > criticism
+   - Make hard training enjoyable
+
+5. **Progressive Periodization:**
+   - October → November → December shows clear progression
+   - Each month builds on previous
+   - Patient, systematic approach
+
+6. **Lane Group Differentiation:**
+   - Distance swimmers need different work than sprinters
+   - Same session structure, customized execution
+   - Individualization within team framework
+
+---
+
+**End of December Section**
+
+**Next:** January 1995 - Championship Phase Acceleration (11 weeks to NCAAs)
+
+---
+
 ## The Color-Coded Energy System
 
 Urbanchek's revolutionary visual training intensity system:
@@ -954,8 +1554,8 @@ When Jon Urbanchek passed away on May 10, 2024, swimmers from this team spoke no
 
 **Project Lead:** Tim Tschohl / Swimnerd  
 **Transcription Started:** April 7, 2026  
-**Last Updated:** April 8, 2026  
-**Status:** Active transcription in progress
+**Last Updated:** April 8, 2026 (December 1995 added)  
+**Status:** Active transcription in progress - October, November, December complete
 
 ---
 

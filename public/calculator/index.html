@@ -5672,7 +5672,10 @@ document.addEventListener('click', function(e) {
         function showTab(tabName, clickedTab) {
             document.querySelectorAll('.content').forEach(c => c.classList.remove('active'));
             document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-            document.getElementById(tabName).classList.add('active');
+            
+            // Handle home tab (id is "home-content" not "home")
+            const contentId = (tabName === 'home') ? 'home-content' : tabName;
+            document.getElementById(contentId).classList.add('active');
             clickedTab.classList.add('active');
             
             // Show/hide event selector

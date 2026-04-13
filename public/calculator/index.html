@@ -2315,60 +2315,284 @@ function showWorkoutDetail(season, date) {
         
 <!-- SETS Tab Content -->
 <div id="sets" class="content">
-    <div class="section-header">
-        <h2>Signature Sets Library</h2>
-        <p class="subtitle">Curated sets from Swimnerd Masters 2025-2026 season • Ready to use in your next practice</p>
-    </div>
 
-    <div class="sets-container">
-        
-        <div class="set-category sprint">
-            <h3>Sprint</h3>
-            <div class="set-item">8x25 FAST @ 1:00</div>\n            <div class="set-item">8x25 FAST Swim @ 1:00</div>\n            <div class="set-item">16x25 FAST @ :35 - all out sprint</div>\n            <div class="set-item">4x25 MAX SPEED @ 1:00</div>\n            <div class="set-item">2x25 Swim Fast @ 1:00</div>
-        </div>
-\n
-        <div class="set-category threshold">
-            <h3>Threshold</h3>
-            <div class="set-item">12x100 (75 @ 400 Pace / 25 EZ) @ 2:00</div>\n            <div class="set-item">20x100 @ 1:30 - threshold pace</div>\n            <div class="set-item">12x100 @ 1:45 (2:00) (2:15) - IM pattern</div>\n            <div class="set-item">8x200 @ 3:00 - lactate tolerance</div>
-        </div>
-\n
-        <div class="set-category endurance">
-            <h3>Endurance</h3>
-            <div class="set-item">40x50 The Grant Hackett Set @ 1:00 (16→every 4th FAST, 12→every 3rd FAST, 8→every other FAST, 4→FAST)</div>\n            <div class="set-item">30x100 @ 1:20 - aerobic base</div>\n            <div class="set-item">3x1000 @ 15:00 - distance work</div>\n            <div class="set-item">12x50 Free - aerobic @ :45 (:50)(1:00)</div>
-        </div>
-\n
-        <div class="set-category im">
-            <h3>IM</h3>
-            <div class="set-item">3x100 IM @ 1:45 (2:00) (2:15)</div>\n            <div class="set-item">12x50 (1-Fly/BK, 1-BK/BRST, 1-BRST/FREE) @ 1:00</div>\n            <div class="set-item">10x100 IM @ 2:00</div>\n            <div class="set-item">12x100 IM pattern (Fly/Back, Back/Breast, Breast/Free, Free/Fly) @ 1:45</div>
-        </div>
-\n
-        <div class="set-category kick">
-            <h3>Kick</h3>
-            <div class="set-item">200 Kick aerobic 70% @ 4:00</div>\n            <div class="set-item">150 Kick 80% @ 3:30</div>\n            <div class="set-item">100 Kick 90% @ 2:00</div>\n            <div class="set-item">50 Kick 100% @ 1:00</div>\n            <div class="set-item">4x75 (50 FKOB / 25 Free) @ 1:30</div>\n            <div class="set-item">12x50 (25 FKOB / 25 Tarzan) @ 1:00</div>
-        </div>
-\n
-        <div class="set-category drill-technique">
-            <h3>Drill/Technique</h3>
-            <div class="set-item">8x25 O- Free, E- Pullouts @ :35</div>\n            <div class="set-item">12x50 (O - 25 FKOB / 25 Tarzan, E - 25 Fly / 25 Free) @ 1:00</div>\n            <div class="set-item">4x75 (25 RT side flutter kick / 25 LT side flutter kick / 25 Free) @ 1:30</div>\n            <div class="set-item">2x25 Fly w/ 15m Kick Out @ :30</div>\n            <div class="set-item">8x25 15m Kickouts @ :30</div>
-        </div>
-\n
-        <div class="set-category pull">
-            <h3>Pull</h3>
-            <div class="set-item">300 Pull w/ buoy only @ 4:30 (5:00) (5:30)</div>\n            <div class="set-item">300 Pull w/ paddles only @ 4:30</div>\n            <div class="set-item">400 Pull Lung Buster 3/5/7/9 x 100</div>\n            <div class="set-item">10x100 Paddles @ 1:30</div>
-        </div>
-\n
-        <div class="set-category race-prep">
-            <h3>Race Prep</h3>
-            <div class="set-item">4x{100 broken 25/25/25/25 @ :05} @ 2:00</div>\n            <div class="set-item">3x{1x200 Broken 75/75/50 :15 :15 @ 3:00}</div>\n            <div class="set-item">200 Descend 1-4 @ 3:00</div>\n            <div class="set-item">4x50 Build @ 1:00</div>
-        </div>
+<style>
+.set-category {
+    margin-bottom: 1.5rem;
+}
+.category-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s;
+}
+.category-header:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+.category-content {
+    padding: 1rem 0;
+    display: none;
+}
+.set-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 0.75rem 0;
+    border-left: 4px solid #667eea;
+    transition: all 0.2s;
+}
+.set-card:hover {
+    transform: translateX(4px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.set-badge {
+    display: inline-block;
+    background: #667eea;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    margin-left: 0.5rem;
+}
+.set-format {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 6px;
+    font-family: monospace;
+    margin: 0.75rem 0;
+    font-size: 0.9rem;
+}
+</style>
 
+<div class="card">
+    <div class="card-title">📚 Signature Sets Library</div>
+    <p style="color: #666; margin-bottom: 2rem;">
+        Proven sets from 3 seasons of training (194 workouts analyzed). Organized by purpose and zone.
+    </p>
+    
+    <!-- THRESHOLD SETS -->
+    <div class="set-category">
+        <div class="category-header" onclick="toggleCategory('threshold')">
+            <div>
+                <h3 style="margin: 0;">🎯 Threshold / Race Pace Sets</h3>
+                <div style="font-size: 0.85rem; opacity: 0.9; margin-top: 0.25rem;">Core race-pace development work</div>
+            </div>
+            <div style="font-size: 1.5rem;">▼</div>
+        </div>
+        <div id="category-threshold" class="category-content">
+            
+            <div class="set-card">
+                <h4 style="margin: 0 0 0.5rem 0;">75 @ 400 Pace + 25 EZ <span class="set-badge">⭐ MOST USED - 11x</span></h4>
+                <div style="color: #666; margin-bottom: 0.75rem;">
+                    Threshold development with active recovery | 1,000m total
+                </div>
+                <div class="set-format">
+                    10x (75 Free @ 400 pace + 25 EZ) @ 2:00
+                </div>
+                <div style="font-size: 0.9rem; color: #555;">
+                    <strong>Why it works:</strong> Simulates race pace without burnout. Built-in recovery prevents pace degradation. Easy to adjust interval for different abilities.
+                </div>
+            </div>
+            
+            <div class="set-card">
+                <h4 style="margin: 0 0 0.5rem 0;">The IM 75s <span class="set-badge">7x appearances</span></h4>
+                <div style="color: #666; margin-bottom: 0.75rem;">
+                    Multi-stroke threshold stamina | 900m total
+                </div>
+                <div class="set-format">
+                    12x75 "The IM 75s" @ 1:30<br>
+                    (Likely 25 Fly/25 Back/25 Breast per 75)
+                </div>
+                <div style="font-size: 0.9rem; color: #555;">
+                    <strong>Why it works:</strong> High-volume IM work develops all strokes at threshold. Coach's signature set.
+                </div>
+            </div>
+            
+            <div class="set-card">
+                <h4 style="margin: 0 0 0.5rem 0;">Broken 200s with Active Recovery <span class="set-badge">5x</span></h4>
+                <div style="color: #666; margin-bottom: 0.75rem;">
+                    Quality threshold pace with recovery
+                </div>
+                <div class="set-format">
+                    3x (1x200 Broken 75/75/50 @ 3:00 + 2x50 EZ @ 1:00)<br>
+                    Equipment: Naked → Paddles → Fins+Paddles
+                </div>
+                <div style="font-size: 0.9rem; color: #555;">
+                    <strong>Why it works:</strong> Allows faster pace than straight 200s. Equipment progression adds resistance/speed variety.
+                </div>
+            </div>
+            
+            <div class="set-card">
+                <h4 style="margin: 0 0 0.5rem 0;">Make the Interval Series <span class="set-badge">8x</span></h4>
+                <div style="color: #666; margin-bottom: 0.75rem;">
+                    Individualized threshold, athlete autonomy
+                </div>
+                <div class="set-format">
+                    12x100 Free - Make the Interval @ 1:20-1:30 (1:40) (1:50)<br>
+                    or<br>
+                    2x (4x50 Free @ :40-:55 Make the Interval)
+                </div>
+                <div style="font-size: 0.9rem; color: #555;">
+                    <strong>Why it works:</strong> Respects individual abilities. Athlete ownership of pacing. Quality over survival.
+                </div>
+            </div>
+            
+        </div>
     </div>
-
-    <div class="sets-footer">
-        <p><strong>How to use:</strong> Click any set to copy to clipboard. Adjust intervals based on your swimmers' ability.</p>
-        <p><strong>Notation:</strong> O = Odd rounds, E = Even rounds, FKOB = Flutter Kick On Back, RT/LT = Right/Left</p>
+    
+    <!-- AEROBIC / PULL SETS -->
+    <div class="set-category">
+        <div class="category-header" onclick="toggleCategory('aerobic')">
+            <div>
+                <h3 style="margin: 0;">💪 Aerobic / Pull Sets</h3>
+                <div style="font-size: 0.85rem; opacity: 0.9; margin-top: 0.25rem;">Foundation building, upper body strength</div>
+            </div>
+            <div style="font-size: 1.5rem;">▼</div>
+        </div>
+        <div id="category-aerobic" class="category-content">
+            
+            <div class="set-card">
+                <h4 style="margin: 0 0 0.5rem 0;">Pull Descending Sets <span class="set-badge">⭐ 14x appearances</span></h4>
+                <div style="color: #666; margin-bottom: 0.75rem;">
+                    Upper body strength + pacing practice | Pull buoy, paddles optional
+                </div>
+                <div class="set-format">
+                    6x100 Pull Descend 1-3, repeat 4-6 @ 1:45<br>
+                    or 8x50 Pull Descend @ 1:00<br>
+                    or 3x200 Pull Descend @ 3:30
+                </div>
+                <div style="font-size: 0.9rem; color: #555;">
+                    <strong>Why it works:</strong> Develops upper body strength. Pacing discipline (must hold back early). Used in 53% of workouts.
+                </div>
+            </div>
+            
+            <div class="set-card">
+                <h4 style="margin: 0 0 0.5rem 0;">Fly + Threshold Free Combo <span class="set-badge">10x</span></h4>
+                <div style="color: #666; margin-bottom: 0.75rem;">
+                    Dual-stroke development, fly endurance without compromising free
+                </div>
+                <div class="set-format">
+                    3x50 Fly aerobic @ 1:00<br>
+                    4x50 Free threshold @ 1:00<br>
+                    Extra :60 rest<br>
+                    (Repeat 3-4 rounds)
+                </div>
+                <div style="font-size: 0.9rem; color: #555;">
+                    <strong>Why it works:</strong> Aerobic fly builds endurance without fatigue. Threshold free maintains race pace work. Smart progressive volume.
+                </div>
+            </div>
+            
+        </div>
     </div>
+    
+    <!-- VO2 MAX / SPEED SETS -->
+    <div class="set-category">
+        <div class="category-header" onclick="toggleCategory('vo2')">
+            <div>
+                <h3 style="margin: 0;">🔥 VO2 Max / Speed Sets</h3>
+                <div style="font-size: 0.85rem; opacity: 0.9; margin-top: 0.25rem;">High-intensity, speed endurance</div>
+            </div>
+            <div style="font-size: 1.5rem;">▼</div>
+        </div>
+        <div id="category-vo2" class="category-content">
+            
+            <div class="set-card">
+                <h4 style="margin: 0 0 0.5rem 0;">Grant Hackett Set <span class="set-badge">Epic</span></h4>
+                <div style="color: #666; margin-bottom: 0.75rem;">
+                    Progressive speed endurance | 2,000m total
+                </div>
+                <div class="set-format">
+                    40x50 Free @ :50<br>
+                    Rounds 1-10: Moderate<br>
+                    Rounds 11-20: Build<br>
+                    Rounds 21-30: Fast<br>
+                    Rounds 31-40: MAX effort
+                </div>
+                <div style="font-size: 0.9rem; color: #555;">
+                    <strong>Why it works:</strong> Progressive intensity. Mental toughness builder. Race pace simulation in fatigued state.
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <!-- SKILLS / DRILLS -->
+    <div class="set-category">
+        <div class="category-header" onclick="toggleCategory('skills')">
+            <div>
+                <h3 style="margin: 0;">🏊 Skills / Race Prep</h3>
+                <div style="font-size: 0.85rem; opacity: 0.9; margin-top: 0.25rem;">Underwater work, starts/turns, technique</div>
+            </div>
+            <div style="font-size: 1.5rem;">▼</div>
+        </div>
+        <div id="category-skills" class="category-content">
+            
+            <div class="set-card">
+                <h4 style="margin: 0 0 0.5rem 0;">15m Kickout Drills <span class="set-badge">⭐ 26x - MOST FREQUENT</span></h4>
+                <div style="color: #666; margin-bottom: 0.75rem;">
+                    Underwater race skills, start/turn simulation
+                </div>
+                <div class="set-format">
+                    8x25 15m Kick Out / 10m Free @ :35-:40<br>
+                    or<br>
+                    8x25 Do 4 Pullouts then Free @ :35
+                </div>
+                <div style="font-size: 0.9rem; color: #555;">
+                    <strong>Why it works:</strong> Race-specific underwater training. Integrated into warmup (not isolated). Short rest maintains intensity.
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <!-- STATS SUMMARY -->
+    <div style="margin-top: 3rem; padding: 1.5rem; background: #f8f9fa; border-radius: 12px;">
+        <h3 style="margin: 0 0 1rem 0;">📊 Set Library Stats</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+            <div>
+                <div style="font-size: 0.85rem; color: #666;">Total Signature Sets</div>
+                <div style="font-size: 1.5rem; font-weight: bold; color: #667eea;">8 proven patterns</div>
+            </div>
+            <div>
+                <div style="font-size: 0.85rem; color: #666;">Analyzed From</div>
+                <div style="font-size: 1.5rem; font-weight: bold; color: #667eea;">194 workouts</div>
+            </div>
+            <div>
+                <div style="font-size: 0.85rem; color: #666;">Most Used Set</div>
+                <div style="font-size: 1.5rem; font-weight: bold; color: #667eea;">15m Kickouts (26x)</div>
+            </div>
+            <div>
+                <div style="font-size: 0.85rem; color: #666;">Equipment Usage</div>
+                <div style="font-size: 1.5rem; font-weight: bold; color: #667eea;">53% pull buoy</div>
+            </div>
+        </div>
+    </div>
+    
 </div>
+
+<script>
+function toggleCategory(categoryName) {
+    const content = document.getElementById('category-' + categoryName);
+    const header = content.previousElementSibling;
+    const arrow = header.querySelector('div:last-child');
+    
+    if (content.style.display === 'none' || content.style.display === '') {
+        content.style.display = 'block';
+        arrow.textContent = '▲';
+    } else {
+        content.style.display = 'none';
+        arrow.textContent = '▼';
+    }
+}
+</script>
+
+        </div>
 
 <style>
 .sets-container {

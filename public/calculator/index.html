@@ -625,44 +625,1691 @@
         <div id="progression" class="content"><div class="card"><div class="card-title">Progression</div><div id="progression-content"></div></div></div>
     </div>
         <div id="workouts" class="content">
-            <div class="card">
-                <div class="card-title">Masters Workouts Library</div>
-                <p style="color: #666; margin-bottom: 1.5rem;">Browse 85 Masters swimming workouts from 2023-2024 season (Sept 2023 - May 2024)</p>
-                
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
-                    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1.25rem; border-radius: 8px; text-align: center;">
-                        <div style="font-size: 2rem; font-weight: bold; margin-bottom: 0.25rem;" id="workout-count">85</div>
-                        <div style="font-size: 0.85rem; opacity: 0.9;">Total Workouts</div>
-                    </div>
-                    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1.25rem; border-radius: 8px; text-align: center;">
-                        <div style="font-size: 2rem; font-weight: bold; margin-bottom: 0.25rem;">2,195m</div>
-                        <div style="font-size: 0.85rem; opacity: 0.9;">Average Distance</div>
-                    </div>
-                    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1.25rem; border-radius: 8px; text-align: center;">
-                        <div style="font-size: 2rem; font-weight: bold; margin-bottom: 0.25rem;">2,900m</div>
-                        <div style="font-size: 0.85rem; opacity: 0.9;">Max Distance</div>
-                    </div>
-                    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1.25rem; border-radius: 8px; text-align: center;">
-                        <div style="font-size: 2rem; font-weight: bold; margin-bottom: 0.25rem;">3</div>
-                        <div style="font-size: 0.85rem; opacity: 0.9;">Pool Locations</div>
-                    </div>
-                </div>
-                
-                <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; align-items: center;">
-                    <div style="flex: 1; min-width: 250px;">
-                        <input type="text" id="workout-search" placeholder="🔍 Search workouts..." style="width: 100%; padding: 0.75rem 1rem; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 1rem;">
-                    </div>
-                    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                        <button onclick="filterWorkouts('all')" class="workout-filter active" style="padding: 0.6rem 1.2rem; border: 2px solid #667eea; background: #667eea; color: white; border-radius: 8px; cursor: pointer; font-size: 0.9rem;">All</button>
-                        <button onclick="filterWorkouts('bayside')" class="workout-filter" style="padding: 0.6rem 1.2rem; border: 2px solid #e0e0e0; background: white; color: #333; border-radius: 8px; cursor: pointer; font-size: 0.9rem;">Bayside</button>
-                        <button onclick="filterWorkouts('greatneck')" class="workout-filter" style="padding: 0.6rem 1.2rem; border: 2px solid #e0e0e0; background: white; color: #333; border-radius: 8px; cursor: pointer; font-size: 0.9rem;">Great Neck</button>
-                        <button onclick="filterWorkouts('2000+')" class="workout-filter" style="padding: 0.6rem 1.2rem; border: 2px solid #e0e0e0; background: white; color: #333; border-radius: 8px; cursor: pointer; font-size: 0.9rem;">2000+</button>
-                        <button onclick="filterWorkouts('2500+')" class="workout-filter" style="padding: 0.6rem 1.2rem; border: 2px solid #e0e0e0; background: white; color: #333; border-radius: 8px; cursor: pointer; font-size: 0.9rem;">2500+</button>
-                    </div>
-                </div>
-                
-                <div id="workout-list"></div>
+
+<style>
+.season-folder {
+    margin-bottom: 1.5rem;
+}
+.season-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.season-header:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+.season-header h3 {
+    margin: 0;
+    font-size: 1.3rem;
+}
+.season-content {
+    padding: 1rem 0;
+}
+.workout-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 0.75rem 0;
+    border-left: 4px solid #667eea;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.workout-card:hover {
+    transform: translateX(4px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+</style>
+
+<div class="card">
+    <div class="card-title">📚 Workout Archive</div>
+    <p style="color: #666; margin-bottom: 2rem;">
+        Complete workout history organized by season. Click a season to expand, then click any workout to view details.
+    </p>
+
+    <div class="season-folder">
+        <div class="season-header" onclick="toggleSeason('2025-2026')">
+            <h3>📁 2025-2026 Season (66 workouts)</h3>
+            <div style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">
+                Total: 146,600m | Avg: 2,221m
             </div>
+        </div>
+        <div id="season-2025-2026" class="season-content" style="display: none;">
+    
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2025-10-08')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2025-10-08</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice + 8x25 O - Free, E - Pullouts → 40x50 The Grant Hackett Set - 16 every 4th FAST, 12 every 3rd FAST, 8 every other FAST, 4 FAST → 100 E2</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,300m</div>
+                    <div style="color: #999; font-size: 0.85rem;">3 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2025-10-08')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2025-10-08</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 8x25 O - Free 1 breath, E - Pullouts 1 breath → 12x75 O - RT/LT/Back Flutter Kick, E - D.P./C.U./Free ... (1 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,200m</div>
+                    <div style="color: #999; font-size: 0.85rem;">4 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2025-10-13')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2025-10-13</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 4x (75 FKOB + 25 Sprint Flutter Kick + 50 Free) → 4x25 Fly + 4x50 Free + 8x25 Fly + 4x50 Free + 16x25 Fly + 4x50 Free ... (1 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,000m</div>
+                    <div style="color: #999; font-size: 0.85rem;">4 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2025-10-15')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2025-10-15</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 4x (1x25 Fly + 1x50 Fly/Back + 1x75 Fly/Back/Breast) → 3x50 Pull MTI + 3x150 Pull MTI + 3x300 Pull MTI ... (1 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">1,900m</div>
+                    <div style="color: #999; font-size: 0.85rem;">4 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2025-10-18')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2025-10-18</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 8x50 O - Breast w/ Dolphin Kick, E - FKOB → 8x50 O - Flutter Kick 25 RT/25 LT, E - Free ... (3 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">1,800m</div>
+                    <div style="color: #999; font-size: 0.85rem;">6 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2025-10-20')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2025-10-20</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 8x25 15m Kick out 10m Free → 2x (200 Kick w/Board or FKOB + 4x50 Free) ... (2 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,000m</div>
+                    <div style="color: #999; font-size: 0.85rem;">5 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2025-10-22')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2025-10-22</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 12x75 the IM 75's → 10x (75 Free Threshold + 25 EZ) ... (1 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,300m</div>
+                    <div style="color: #999; font-size: 0.85rem;">4 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2025-10-25')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2025-10-25</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 8x50 O - Single Arm Free RT/LT, E - 3 Stroke Glide on Side → 8x25 Sprint Series (Streamline Flutter Kick, Dog Paddle, Tarzan, Free) ... (3 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,200m</div>
+                    <div style="color: #999; font-size: 0.85rem;">6 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2025-10-27')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2025-10-27</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice + 8x25 15m Kick Out → 5x100 IM → 1x50 Fly aerobic + 4x50 Free threshold (Extra :60) x3 rounds ... (3 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,400m</div>
+                    <div style="color: #999; font-size: 0.85rem;">6 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2025-10-29')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2025-10-29</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 2x (4x25 Tarzan + 1x50 FKOB + 4x25 15m Kickouts - 2nd Round w/ Fins) → 4x50 Free EZ ... (3 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,400m</div>
+                    <div style="color: #999; font-size: 0.85rem;">6 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2025-11-01')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2025-11-01</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice + 8x25 Do 4 Pullouts then Free → 4x75 25 12.5 RT/12.5 LT Kick, 25 Dog Paddle ble 3, 25 Free long & strong → 4x50 1 each stroke ... (3 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,400m</div>
+                    <div style="color: #999; font-size: 0.85rem;">6 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2025-11-03')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2025-11-03</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 4x125 IM + 25 Fly → 8x75 O - FKOB, E - Free ... (2 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,100m</div>
+                    <div style="color: #999; font-size: 0.85rem;">5 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2025-11-10')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2025-11-10</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 3x100 50 FKOB / 50 Breast w/Fly Pull → 3x100 12.5 Tarzan / 12.5 Free ... (4 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,500m</div>
+                    <div style="color: #999; font-size: 0.85rem;">7 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2025-11-12')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2025-11-12</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice + 8x25 15m Kick Outs → 1x25 Fly + 1x50 Back + 1x75 Breast (x3 rounds, increasing reps) → 8x25 1 each stroke FAF ... (2 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">1,800m</div>
+                    <div style="color: #999; font-size: 0.85rem;">5 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2025-11-17')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2025-11-17</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 8x25 Max Speed Endurance Freestyle → 12x50 1 Fly/BK, 1 BK/BRST, 1 BRST/FREE ... (4 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,100m</div>
+                    <div style="color: #999; font-size: 0.85rem;">7 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2025-11-19')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2025-11-19</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 16x50 2 FKOB, 2 Freestyle → 12x100 25 @ 400 Pace, 25 E2 ... (1 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,400m</div>
+                    <div style="color: #999; font-size: 0.85rem;">4 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2025-11-24')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2025-11-24</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 2x (200 25 FKOB/25 Fly + 4x50 Non Free Aerobic + 4x25 Free 100 Pace) → 2x (3x200 Pull Descend 1-3) - 1st Round buoy only, 2nd Round paddles only ... (1 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,600m</div>
+                    <div style="color: #999; font-size: 0.85rem;">4 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2025-11-26')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2025-11-26</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 300 Kick → 300 Pull no paddles ble 3/5/7 x50 ... (3 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,200m</div>
+                    <div style="color: #999; font-size: 0.85rem;">6 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2025-11-29')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2025-11-29</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 12x75 the IM 75's → 3x (1x50 Kick FAST w/Board + 4x25 100 Free Pace + 1x50 EZ) ... (1 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">1,900m</div>
+                    <div style="color: #999; font-size: 0.85rem;">4 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2025-12-01')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2025-12-01</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 4x125 IM + Fly → 4x100 Pull w/buoy b/e 3/5/7/9 x 25 ... (3 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,500m</div>
+                    <div style="color: #999; font-size: 0.85rem;">6 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2025-12-03')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2025-12-03</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice + 8x25 Free w/2 Breast Pullouts → 300 going 75 FKOB 25 Free + 8x25 Free w/2 Pullouts → 1x50 FAST + 100 EZ + 2x50 FAST + 100 EZ + 3x50 FAST + 100 EZ + 4x50 FAST ... (1 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">1,900m</div>
+                    <div style="color: #999; font-size: 0.85rem;">4 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2025-12-06')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2025-12-06</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 16x25 Free Kick to 15 yds → 16x25 O - Tarzan, E - Free ... (3 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">1,800m</div>
+                    <div style="color: #999; font-size: 0.85rem;">6 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2025-12-08')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2025-12-08</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 3x (4x25 Freestyle + 4x50 Make the Fastest Interval + 4x100) - no equipment/buoy only/paddles only → 100 EZ</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,500m</div>
+                    <div style="color: #999; font-size: 0.85rem;">3 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2025-12-10')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2025-12-10</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice + 8x25 Free w/15m Kickout → 2x200 FKOB + 4x50 Free + 8x25 12.5 Fast Kick Streamline Flutter Kick on Surface, 12.5 EZ swim → 3x (1x75 FAST + 1x50 FAST + 1x25 FAST) - 1st Rd no equipment, 2nd & 3rd anything goes ... (1 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">1,850m</div>
+                    <div style="color: #999; font-size: 0.85rem;">4 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2025-12-13')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2025-12-13</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 2x (200 Kick aerobic 70% + 2x25 Swim Fast + 150 Kick 80% + 4x25 FAST Swim + 100 Kick 90% + 6x25 FAST Swim + 50 Kick 100% + 8x25 FAST Swim) → 100 EZ</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,400m</div>
+                    <div style="color: #999; font-size: 0.85rem;">3 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2025-12-15')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2025-12-15</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice + 300 pull ble 3/5/7 → 4x50 O - Breast Pull w/ Fly Kick, E - Repeat two pullouts + 4x50 O - FKOB w/ 12.5m Underwaters, E - Tarzan ble 3 + 4x50 One each stroke + 4x50 Free Threshold → 2x (8x25 Fly aerobic + 3x100 Free threshold) ... (1 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,500m</div>
+                    <div style="color: #999; font-size: 0.85rem;">4 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2025-12-17')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2025-12-17</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice + 8x25 Pullouts → 3x100 Fly/Back, Back/Breast, Breast/Free x25 + 6x50 FKOB + 3x100 Fly/Back, Back/Breast, Breast/Free x50 + 6x50 FKOB + 3x100 IM → 4x25 MAX Broken 100 IM ... (1 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,200m</div>
+                    <div style="color: #999; font-size: 0.85rem;">4 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2025-12-20')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2025-12-20</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 12x75 the IM 75's → 12x100 75 @ 400 Pace / Get Time, 25 EZ ... (1 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,500m</div>
+                    <div style="color: #999; font-size: 0.85rem;">4 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2025-12-24')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2025-12-24</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice + 3x100 IM + 16x25 Free 15m Kickout → 3x (1x300 Pull buoy & band + 3x100 Free Descend 1-3 to Threshold) → 100 EZ</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,900m</div>
+                    <div style="color: #999; font-size: 0.85rem;">3 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2025-12-27')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2025-12-27</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 4x25 Fly + 4x50 FKOB + 8x25 Fly + 4x50 FKOB + 16x25 Fly + 4x50 FKOB → 8x50 Pull Max Speed - Paddles frowned upon ... (1 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,100m</div>
+                    <div style="color: #999; font-size: 0.85rem;">4 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2025-12-29')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2025-12-29</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 2x (1x200 Pull w/ Buoy only b/e 3/5/7/9 x 50 + 1x150 Free aerobic + 1x50 Fly or Free FAST + 1x150 Free aerobic + 1x100 Free aerobic + 2x50 Fly or Free FAST + 1x100 Free aerobic + 3x50 Fly or Free FAST) → 100 EZ</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,400m</div>
+                    <div style="color: #999; font-size: 0.85rem;">3 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2026-01-05')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2026-01-05</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 8x25 O- Free ble 3/5/7/9, E- Pullouts 1 breath → 8x100 IM ... (2 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,000m</div>
+                    <div style="color: #999; font-size: 0.85rem;">5 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2026-01-07')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2026-01-07</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 8x75 25 Fly / 25 Tarzan / 25 FKOB → 8x25 Free build to threshold ... (2 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,200m</div>
+                    <div style="color: #999; font-size: 0.85rem;">5 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2026-01-10')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2026-01-10</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 16x50 O- Dog Paddle ble 3, E- Free ble 3 - BUOY ONLY! → 4x (4x25 Max Speed choice of strokes & equipment) ... (2 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">1,800m</div>
+                    <div style="color: #999; font-size: 0.85rem;">5 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2026-01-12')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2026-01-12</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 4x75 25 RT side flutter kick, 25 LT side flutter kick, 25 Free + 4x75 50 FKOB, 25 Free → 300 Pull w/ buoy only + 3x100 IM + 300 Pull w/ buoy only + 3x100 IM + 300 Pull w/ paddles only ... (1 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,500m</div>
+                    <div style="color: #999; font-size: 0.85rem;">4 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2026-01-14')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2026-01-14</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice + 8x25 EZ Fly → 8x100 O - FKOB Best Ave, E - Free → 8x75 Free @ 400 Pace ... (2 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,200m</div>
+                    <div style="color: #999; font-size: 0.85rem;">5 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2026-01-21')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2026-01-21</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 12x75 the IM 75's → 100 @ 1:30, 200 @ 3:00, 300 @ 4:30, 400 @ 6:00 - Descend 1–4 ... (2 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,400m</div>
+                    <div style="color: #999; font-size: 0.85rem;">5 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2026-01-24')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2026-01-24</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 8x75 O: 25 Breast w/ Fly Kick, 25 Single Arm Fly 1/1, 25 Free w/ Fly Kick, E: FKOB → 8x75 Pull w/ buoy & band - Make the Interval ... (2 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,000m</div>
+                    <div style="color: #999; font-size: 0.85rem;">5 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2026-01-26')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2026-01-26</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice + 8x25 4 Pullouts + Free EZ → 3x (8x25 Fly aerobic + 3x100 25 @ 400 Pace / 25 EZ + 2x25 Free / 100 Pace) → 100 EZ</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,250m</div>
+                    <div style="color: #999; font-size: 0.85rem;">3 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2026-01-28')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2026-01-28</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice + 8x25 4 Pullouts + Free EZ → THE GRANT HACKETT SET: 16x50 Every 4th is Best Ave, 12x50 Every 3rd is Best Ave, 8x50 Every other is Best Ave, 4x50 Best Ave → 100 EZ</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,600m</div>
+                    <div style="color: #999; font-size: 0.85rem;">3 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2026-02-02')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2026-02-02</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 2x50 All Freestyle + 2x100 Pull or Swim + 2x150 1 Aerobic + 2x200 1 Threshold + 2x250 + 2x200 + 2x150 + 2x100 + 2x50 → 100 EZ</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,900m</div>
+                    <div style="color: #999; font-size: 0.85rem;">3 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2026-02-04')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2026-02-04</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 3x (4x25 Fly or Free + 2x50 FKOB + 1x100 IM) → 4x (1x50 Free 100 Pace + 2x25 Free 100 Pace + 1x50 EZ) ... (1 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">1,900m</div>
+                    <div style="color: #999; font-size: 0.85rem;">4 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2026-02-07')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2026-02-07</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice + 3x100 IM + 300 pull b/e 3/5/7 x 50 + 16x25 Fly → 5x200 Free Best Ave (Threshold) → 100 EZ</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,400m</div>
+                    <div style="color: #999; font-size: 0.85rem;">3 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2026-02-09')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2026-02-09</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice + 8x25 Pullouts → 8x75 50 FKOB / 25 Free + 4x25 Kick w/ Board MAX + 8x50 25 FKOB / 25 Free + 4x25 Kick w/ Board MAX + 8x25 Fly + 4x25 Kick w/ Board MAX → 100 EZ</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,100m</div>
+                    <div style="color: #999; font-size: 0.85rem;">3 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2026-02-11')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2026-02-11</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 12x50 O - 25 FKOB / 25 Tarzan, E - 25 Fly / 25 Free → 12x100 75 @ 400 Pace (Threshold) / 25 EZ ... (1 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,200m</div>
+                    <div style="color: #999; font-size: 0.85rem;">4 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2026-02-14')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2026-02-14</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice + 6x50 IM 12.5 + 8x25 Sprint Series 12.5 Fast (Streamline Flutter Kick, Dog Paddle, Tarzan, Free) → 6x50 MAX → 100 EZ</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">1,200m</div>
+                    <div style="color: #999; font-size: 0.85rem;">3 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2026-02-14')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2026-02-14</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice + 6x50 IM 125 → 3x300 Descend 1-3 to Threshold + 4x25 100 Pace + 2x300 1ez/1 Threshold + 4x25 100 Pace + 1x300 Threshold + 4x25 100 Pace → 100 EZ</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,800m</div>
+                    <div style="color: #999; font-size: 0.85rem;">3 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2026-02-16')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2026-02-16</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 6x125 100 IM + 25 Fly + 6x100 Pull - only paddles or only pull buoy + 6x75 25 RT arm only Fly, 25 LT arm only Fly, 25 Fly + 6x50 Free - Threshold + 6x25 MAX → 100 EZ</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,400m</div>
+                    <div style="color: #999; font-size: 0.85rem;">3 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2026-02-18')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2026-02-18</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 4x150 50 Kick: 25 RT side / 25 LT side, 50 Dog Paddle ble 3, 50 Free + 4x100 25 FKOB / 25 Fly + 4x50 4 Pullouts + Free Rest of the 25 → 8x100 2 - 75 EZ / 25 Threshold, 2 - 50 EZ / 50 Threshold, 2 - 25 EZ / 75 Threshold, 2 - Threshold ... (1 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,400m</div>
+                    <div style="color: #999; font-size: 0.85rem;">4 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2026-02-21')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2026-02-21</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 12x75 the IM 75's → 3x (200 Flutter Kick w/Board + 4x25 MAX) ... (1 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,200m</div>
+                    <div style="color: #999; font-size: 0.85rem;">4 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2026-02-23')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2026-02-23</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice + 8x25 O – Fly / E – FKOB + 8x25 O – 4 Pullouts + Free / E – Breast or Back or CSS + 8x25 O – Tarzan / E – Free → 6x100 Free + 4x100 Make the Interval + 2x100 → 100 EZ</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,200m</div>
+                    <div style="color: #999; font-size: 0.85rem;">3 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2026-02-25')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2026-02-25</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice + 12x25 O – 4 Pullouts / E – 15m Wall out → 1x50 Fly + 3x50 Free + 2x50 Fly + 2x50 Free + 3x50 Fly + 1x50 Free → 20x25 100 Free Pace ... (1 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">1,800m</div>
+                    <div style="color: #999; font-size: 0.85rem;">4 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2026-02-28')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2026-02-28</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 12x50 2 - FKOB / 1 - Dog Paddle s/c 3 / 1 - Free → 8x100 75 @ 400 Pace / 25 EZ ... (2 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,700m</div>
+                    <div style="color: #999; font-size: 0.85rem;">5 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2026-03-02')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2026-03-02</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice + 16x25 O - 4 Pullouts + Free / E - 10 Fly Kicks + Free → 2x (4x75 Fly/Bk/Brst + 4x50 Pull w/Buoy only b/e 3/5/7/9 x50) - No rest b/w rounds → 8x25 2 - Pull No Breath Max Speed / 2 - Free Same ... (1 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,000m</div>
+                    <div style="color: #999; font-size: 0.85rem;">4 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2026-03-04')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2026-03-04</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 2x (2x25 Fly w/15m Kick Out + 2x50 Free w/15m Kick Outs + 2x100 FKOB 1 ez/1 fast) → 12x100 1 - Fly/Back, 1 - Back/Breast, 1 - Breast/Free, 1 - Free/Fly ... (1 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,300m</div>
+                    <div style="color: #999; font-size: 0.85rem;">4 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2026-03-07')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2026-03-07</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 8x75 25 - FKOB - Kick to 15m, 25 - Tarzan, 25 - Free → 2x (3x100 Kick Descend 1-3 + 8x25 Fly or Choice FAST) ... (1 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,000m</div>
+                    <div style="color: #999; font-size: 0.85rem;">4 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2026-03-09')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2026-03-09</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice + 12x25 Sprint Series 12.5 FAST 12.5 EZ (1 - Streamline Flutter Kick, 1 - Dog Paddle, 1 - Tarzan, 1 - Free) → 3x25 Free Threshold + 3x50 Free Threshold + 3x75 Free Threshold + 3x100 Free Threshold + 3x125 Free Threshold → 75 EZ</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">1,800m</div>
+                    <div style="color: #999; font-size: 0.85rem;">3 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2026-03-11')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2026-03-11</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice + 8x25 O - Pullouts x 4, E - Fly Kicks x 10 → 4x25 Fly Super Duper EZ + 6x50 Free Threshold + 6x25 Fly same as above + 4x50 Free Threshold → 10x25 100 Free Pace ... (1 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">1,600m</div>
+                    <div style="color: #999; font-size: 0.85rem;">4 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2026-03-14')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2026-03-14</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 8x100 IM 1 - Fast Free, 1 - Fast Breast, 1 - Fast Back, 1 - Fast Fly → 2x (3x50 FKOB + 1x150 Free + 6x25 200 Pace) ... (2 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,200m</div>
+                    <div style="color: #999; font-size: 0.85rem;">5 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2026-03-18')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2026-03-18</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice + 6x50 25 - 4 Pullouts + Free, 25 - 10 Fly Kicks + Free → 3x (8x25 Fly + 3x100 75 @ 400 Pace / 25 EZ) → 100 EZ</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,200m</div>
+                    <div style="color: #999; font-size: 0.85rem;">3 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2026-03-21')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2026-03-21</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 4x150 125 - Kick, 25 - Free + 8x25 Free → 3x (200 Pull No Paddles + 4x50 Free Swim Threshold) ... (1 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,400m</div>
+                    <div style="color: #999; font-size: 0.85rem;">4 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2026-03-25')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2026-03-25</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 12x75 the IM 75s → 3x (4x100 Make the Interval 1@1:25, 1@1:20, 1@1:15, 1@1:10) ... (1 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,500m</div>
+                    <div style="color: #999; font-size: 0.85rem;">4 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2026-03-28')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2026-03-28</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice + 8x25 EF, FE, FF, EE → 8x75 25 Rt Arm Fly, 25 Lt Arm Fly, 25 Free → 6x100 IM ... (2 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,600m</div>
+                    <div style="color: #999; font-size: 0.85rem;">5 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2026-03-30')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2026-03-30</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 3x (3x75 25 - 10 Fly Kicks + Free, 25 - 1RT/1LT Fly, 25 - Free w/ Fly Kick + 3x50 IM x 12.5 + 3x25 Free - 200 Pace) → 3x50 FAST ... (1 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">1,900m</div>
+                    <div style="color: #999; font-size: 0.85rem;">4 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2026-04-01')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2026-04-01</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice + 8x25 4 Pullouts + Free + 4x25 Build to Threshold → 14x100 75 Threshold / 400 Pace, 25 EZ → 100 EZ</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,100m</div>
+                    <div style="color: #999; font-size: 0.85rem;">3 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2025-2026', '2026-04-04')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2026-04-04</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice + 8x50 25 Fly, 25 FKOB → 2x (1x200 Kick w/ Buoy as Board + 1x200 Pull w/ Buoy Only B/E 3/5/7/9 x 50) → 3x (4x25 Fly + 1x300 Free Jack King Mile Pace) - No Extra Rest B/W Rounds ... (1 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,800m</div>
+                    <div style="color: #999; font-size: 0.85rem;">4 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+    
+    <div class="season-folder">
+        <div class="season-header" onclick="toggleSeason('2024-2025')">
+            <h3>📁 2024-2025 Season (1 workouts)</h3>
+            <div style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">
+                Total: 2,200m | Avg: 2,200m
+            </div>
+        </div>
+        <div id="season-2024-2025" class="season-content" style="display: none;">
+    
+        <div class="workout-card" onclick="showWorkoutDetail('2024-2025', '11/23/2024')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">11/23/2024</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 8x25 free @ :30 → 4x50 Pull @ :45 (:50) ... (4 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,200m</div>
+                    <div style="color: #999; font-size: 0.85rem;">7 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+    
+    <div class="season-folder">
+        <div class="season-header" onclick="toggleSeason('2023-2024')">
+            <h3>📁 2023-2024 Season (55 workouts)</h3>
+            <div style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">
+                Total: 121,575m | Avg: 2,210m
+            </div>
+        </div>
+        <div id="season-2023-2024" class="season-content" style="display: none;">
+    
+        <div class="workout-card" onclick="showWorkoutDetail('2023-2024', '2023-12-28')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2023-12-28</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 8x25 O - Kick E - Swim No Breath → 12x75 the IM 75's ... (2 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,000m</div>
+                    <div style="color: #999; font-size: 0.85rem;">5 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2023-2024', '2023-12-30')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2023-12-30</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 8x75 O - 25 Rotor Kick / 25 D.P. / 25 Free E - Fly/Bk/Brst → 2x{100/200/400} - Near Threshold ... (2 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,500m</div>
+                    <div style="color: #999; font-size: 0.85rem;">5 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2023-2024', '2024-01-02')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2024-01-02</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 8x25 Free No Breath → FKOB/Tarzan progression (75/25/50/50/25/75) ... (2 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,500m</div>
+                    <div style="color: #999; font-size: 0.85rem;">5 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2023-2024', '2024-01-04')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2024-01-04</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 8x25 Sprint Starts → 4x{2x50 Fast / 1x100 E2} ... (2 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">1,900m</div>
+                    <div style="color: #999; font-size: 0.85rem;">5 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2023-2024', '2024-01-06')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2024-01-06</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 4x150 25 Kick / 50 Drill / 25 Swim → 3x{4x100} Fastest Interval Possible ... (2 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,600m</div>
+                    <div style="color: #999; font-size: 0.85rem;">5 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2023-2024', '2024-01-09')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2024-01-09</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 2x{200 FKOB / 4x50 RO IM / 4x25 Free} - No Fins → 16x25 builds (15m/20m/25m/EZ) As Fast As Possible ... (1 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">1,800m</div>
+                    <div style="color: #999; font-size: 0.85rem;">4 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2023-2024', '2024-01-11')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2024-01-11</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 4x25 Tarzan / 100 FKOB / 6x25 Tarzan / 200 FKOB / 8x25 Tarzan / 300 FKOB - No fins → 150 Easy Swim ... (2 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,000m</div>
+                    <div style="color: #999; font-size: 0.85rem;">5 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2023-2024', '2024-01-16')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2024-01-16</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 4x50 IM → 8x25 No Breath Free ... (2 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,150m</div>
+                    <div style="color: #999; font-size: 0.85rem;">5 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2023-2024', '2024-01-23')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2024-01-23</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 8x25 No Breath → 4x100 / 3x200 / 2x300 / 1x400 - Make the Interval - Pull or Swim ... (1 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,600m</div>
+                    <div style="color: #999; font-size: 0.85rem;">4 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2023-2024', '2024-01-25')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2024-01-25</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 12x75 the IM 75's → 4x{4x25 Broken 100 Pace} ... (1 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">1,700m</div>
+                    <div style="color: #999; font-size: 0.85rem;">4 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2023-2024', '2024-01-27')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2024-01-27</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 6x50 IM → 12x25 O - FKOB E - Tarzan ... (2 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,600m</div>
+                    <div style="color: #999; font-size: 0.85rem;">5 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2023-2024', '2024-01-30')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2024-01-30</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 4x75 25 K/D/S → 4x25 Free No Breath ... (2 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,600m</div>
+                    <div style="color: #999; font-size: 0.85rem;">5 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2023-2024', '2024-02-01')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2024-02-01</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 4x150 Kick → 12x25 Free No Breath ... (2 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,600m</div>
+                    <div style="color: #999; font-size: 0.85rem;">5 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2023-2024', '2024-02-06')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2024-02-06</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 8x25 No Breath - Odds on :25 Evens on :35 → 50/100/150/200 - 25 FKOB/25 Tarzan ... (2 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,600m</div>
+                    <div style="color: #999; font-size: 0.85rem;">5 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2023-2024', '2024-02-08')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2024-02-08</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 8x25 Free No Breath → 6x100 - 2 Fly/BK / 2 BK/BRST / 2 BRST/FREE ... (2 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,200m</div>
+                    <div style="color: #999; font-size: 0.85rem;">5 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2023-2024', '2024-02-10')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2024-02-10</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 12x75 - 2 D.P./Fingertip/Freestyle / 2 Tarzan/Free w/Fly Kick/Catch Up / 2 Freestyle → 20x25 FAST Choice ... (1 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">1,800m</div>
+                    <div style="color: #999; font-size: 0.85rem;">4 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2023-2024', '2024-02-12')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2024-02-12</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 8x25 → 2x{75 Fly/BK/BRST / 2x50 FKOB / 4x25 Tarzan} ... (3 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,150m</div>
+                    <div style="color: #999; font-size: 0.85rem;">6 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2023-2024', '2024-02-14')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2024-02-14</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 8x25 Free - Focus on stroke count → 4x{8x50 Pull / 1x100 Kick FAST} - No Paddles/No Fins ... (1 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,600m</div>
+                    <div style="color: #999; font-size: 0.85rem;">4 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2023-2024', '2024-02-17')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2024-02-17</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 8x25 → 18x{75 @ 400 Pace / 25 EZ} - Happy Birthday Gregor ... (1 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,400m</div>
+                    <div style="color: #999; font-size: 0.85rem;">4 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2023-2024', '2024-02-19')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2024-02-19</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 8x25 - How many strokes before breath? → 46x50 - 16 every 4th FAST / 12 every 3rd FAST / 8 every other FAST / 4 ALL FAST ... (2 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,900m</div>
+                    <div style="color: #999; font-size: 0.85rem;">5 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2023-2024', '2024-02-24')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2024-02-24</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 8x25 → 3x{300 Swim or Pull / 4x25 Kick w/ Board MAX} ... (1 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,100m</div>
+                    <div style="color: #999; font-size: 0.85rem;">4 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2023-2024', '2024-02-26')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2024-02-26</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 8x25 → 5x{4x25 Fly / 2x50 25 Dog Paddle/25 Tarzan / 1x Free Threshold} - builds 75 to 175 ... (1 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,225m</div>
+                    <div style="color: #999; font-size: 0.85rem;">4 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2023-2024', '2024-02-28')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2024-02-28</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 8x25 → 4x125 IM + 25 Fly ... (3 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">1,800m</div>
+                    <div style="color: #999; font-size: 0.85rem;">6 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2023-2024', '2024-03-02')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2024-03-02</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 8x25 alternating intervals :25/:35 → 200 Kick / 8x25 Fly / 200 Kick / 16x25 Fly / 200 Kick / 24x25 Fly ... (1 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,400m</div>
+                    <div style="color: #999; font-size: 0.85rem;">4 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2023-2024', '2024-03-04')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2024-03-04</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 8x25 → 5x100 - 25 Kick/50 Tarzan/25 Kick ... (2 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">1,500m</div>
+                    <div style="color: #999; font-size: 0.85rem;">5 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2023-2024', '2024-03-06')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2024-03-06</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 8x25 O - Pullouts E - Free → 2x{100/200/300} Swim or Pull ... (2 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,000m</div>
+                    <div style="color: #999; font-size: 0.85rem;">5 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2023-2024', '2024-03-09')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2024-03-09</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 8x25 O - Pullouts E - Streamline Flutter Kick → 5x{3x100} Make the Interval ... (1 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,100m</div>
+                    <div style="color: #999; font-size: 0.85rem;">4 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2023-2024', '2024-03-12')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2024-03-12</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 8x25 Free → 2x{50/100/150/200/250} Best Average - 1st Rd No Equipment / 2nd Rd Pull w/anything ... (1 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,100m</div>
+                    <div style="color: #999; font-size: 0.85rem;">4 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2023-2024', '2024-03-14')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2024-03-14</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 8x25 Pullouts → 3x{300 Flutter Kick w/ Board Not Fast / 8x25 Fly (or whatever) 200 Pace} ... (1 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,100m</div>
+                    <div style="color: #999; font-size: 0.85rem;">4 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2023-2024', '2024-03-16')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2024-03-16</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 8x25 → 12x75 the IM 75's ... (2 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,300m</div>
+                    <div style="color: #999; font-size: 0.85rem;">5 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2023-2024', '2024-03-19')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2024-03-19</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 8x25 - Least # of Breaths → 2x{4x75 50 FKOB/25 Tarzan / 1x400 Negative Split} ... (1 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,000m</div>
+                    <div style="color: #999; font-size: 0.85rem;">4 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2023-2024', '2024-03-21')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2024-03-21</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 8x25 Free - 1 @ :25 / 1 @ :35 → 2x{4x75 25 Flutter Kick on Back/25 Dog Paddle/25 Freestyle / 4x50 mixed / 4x25 MAX SPEED choice} ... (1 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">1,900m</div>
+                    <div style="color: #999; font-size: 0.85rem;">4 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2023-2024', '2024-03-23')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2024-03-23</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 8x25 Sprint Series → 3x100 - 25 Back/25 Free ... (3 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,400m</div>
+                    <div style="color: #999; font-size: 0.85rem;">6 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2023-2024', '2024-03-26')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2024-03-26</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 8x25 Fly No Breath → 6x50 Freestyle / 3x100 Long & DRM / 1x600 / 3x100 Strong / 6x50 Maybe practice sighting ... (1 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,400m</div>
+                    <div style="color: #999; font-size: 0.85rem;">4 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2023-2024', '2024-03-27')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2024-03-27</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 8x25 - O Free E. Pullouts → 4x{2x50 FKOB / 4x25 Fly or Free} ... (2 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,400m</div>
+                    <div style="color: #999; font-size: 0.85rem;">5 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2023-2024', '2024-03-30')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2024-03-30</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 4x50 IM → 4x25 Free No Breath ... (3 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">1,800m</div>
+                    <div style="color: #999; font-size: 0.85rem;">6 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2023-2024', '2024-04-01')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2024-04-01</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 4x50 IM → 4x25 Free No Breath ... (2 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,700m</div>
+                    <div style="color: #999; font-size: 0.85rem;">5 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2023-2024', '2024-04-03')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2024-04-03</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 8x25 Fly No Breath → 16x50 O - 25 FKOB/25 Tarzan E - Free ... (2 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">1,800m</div>
+                    <div style="color: #999; font-size: 0.85rem;">5 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2023-2024', '2024-04-06')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2024-04-06</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 8x25 Pullouts → 1x75/1x25/2x75/1x25/3x75 FKOB ... (3 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">1,800m</div>
+                    <div style="color: #999; font-size: 0.85rem;">6 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2023-2024', '2024-04-08')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2024-04-08</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 8x25 Free → 4x150 - 25 RT side Flutter Kick/25 LT side Flutter Kick/50 Dog Paddle/50 Free build to Threshold ... (2 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,200m</div>
+                    <div style="color: #999; font-size: 0.85rem;">5 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2023-2024', '2024-04-10')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2024-04-10</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 8x25 Pullouts → 8x75 - 25 Kick (no fins)/25 Tarzan/25 Free ... (1 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,300m</div>
+                    <div style="color: #999; font-size: 0.85rem;">4 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2023-2024', '2024-04-13')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2024-04-13</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 6x25 Streamline Flutter Kick → 4x100 IM rotating stroke order ... (1 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,050m</div>
+                    <div style="color: #999; font-size: 0.85rem;">4 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2023-2024', '2024-04-15')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2024-04-15</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 8x25 Free → 4x{2x50 Kick No Fins / 4x25 O-Tarzan E-OW Freestyle / 100 Free @ 400 Pace} - adds 100 per round ... (1 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,500m</div>
+                    <div style="color: #999; font-size: 0.85rem;">4 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2023-2024', '2024-04-16')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2024-04-16</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 8x25 Free - Least # of breaths → 16x25 Sprint Series - 12½ Fast 12½ EZ - 4 types ... (2 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,000m</div>
+                    <div style="color: #999; font-size: 0.85rem;">5 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2023-2024', '2024-04-20')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2024-04-20</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 8x25 Pullouts → 8x25 O - Tarzan E - OW Freestyle ... (2 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,300m</div>
+                    <div style="color: #999; font-size: 0.85rem;">5 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2023-2024', '2024-04-22')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2024-04-22</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 8x25 Fly breath every 10 → 8x50 25 Build Stroke IM order / 25 Free EZ ... (2 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">1,750m</div>
+                    <div style="color: #999; font-size: 0.85rem;">5 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2023-2024', '2024-04-24')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2024-04-24</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 8x25 free - Have You Improved? → 12x75 the IM 75's ... (3 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,400m</div>
+                    <div style="color: #999; font-size: 0.85rem;">6 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2023-2024', '2024-04-27')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2024-04-27</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 8x50 O - K/S E - D/S → 2x{4x100 @ 400 Pace} descending intervals ... (2 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">1,900m</div>
+                    <div style="color: #999; font-size: 0.85rem;">5 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2023-2024', '2024-04-29')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2024-04-29</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 8x50 O - 25 FKOB/25 Tarzan E - 25 Tarzan/25 Free OW → 2x{4x100/3x100/2x100/1x100} Make the Interval descending - 2nd Rd Pull ... (1 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,800m</div>
+                    <div style="color: #999; font-size: 0.85rem;">4 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2023-2024', '2024-05-01')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2024-05-01</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 8x50 O - 25 Free w/ Dolphin Kick/25 OW Free E - 25 Dog Paddle/25 OW Free → 12x25 EF/FE/FF/EE - 12.5 each ... (1 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">1,500m</div>
+                    <div style="color: #999; font-size: 0.85rem;">4 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2023-2024', '2024-05-04')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2024-05-04</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 8x25 Free - Least # of breaths → 2+x{4x75 25 FKOB/25 Tarzan/25 Free / 4x25 Fly} ... (2 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,400m</div>
+                    <div style="color: #999; font-size: 0.85rem;">5 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2023-2024', '2024-05-06')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2024-05-06</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 8x50 O - 25 Tarzan/25 FKOB E - 25 FKOB/25 Tarzan → 4x{8x25 Fly / 200 Free} - Last 200 of the Jack King - 41 DAYS OUT ... (1 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,400m</div>
+                    <div style="color: #999; font-size: 0.85rem;">4 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2023-2024', '2024-05-11')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2024-05-11</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 3+x{25 Fly/50 Back/25 Breast/100 IM} → 5x{12x100} O - FKOB E - Freestyle @ Threshold ... (1 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,350m</div>
+                    <div style="color: #999; font-size: 0.85rem;">4 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2023-2024', '2024-05-15')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2024-05-15</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 4x50 IM 125 each → 8x25 No Breath / Speed Play ... (2 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,400m</div>
+                    <div style="color: #999; font-size: 0.85rem;">5 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workout-card" onclick="showWorkoutDetail('2023-2024', '2024-05-18')">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <div style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">2024-05-18</div>
+                    <div style="color: #666; font-size: 0.9rem;">300 choice → 8x50 O - Kick E - Swim - Preferably no fins → 300 Pull Buoy Only / 6x50 OW Freestyle / 300 Pull Paddles Only / 6x50 25 Tarzan/25 Free / 300 Pull choice - As Fast As Possible ... (1 more sets)</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: bold; color: #667eea; font-size: 1.2rem;">2,300m</div>
+                    <div style="color: #999; font-size: 0.85rem;">4 sets</div>
+                </div>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+    
+</div>
+
+<script>
+function toggleSeason(seasonName) {
+    const content = document.getElementById('season-' + seasonName);
+    if (content.style.display === 'none') {
+        content.style.display = 'block';
+    } else {
+        content.style.display = 'none';
+    }
+}
+
+function showWorkoutDetail(season, date) {
+    alert('Workout detail view coming soon!\n\nSeason: ' + season + '\nDate: ' + date);
+    // TODO: Show full workout breakdown in modal
+}
+</script>
+
         </div>
 
         

@@ -68,6 +68,54 @@
         .goal-box-active { box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3) !important; }
         .detailed-pacing-container { min-height: 0; }
         
+        /* Mobile styles */
+        @media (max-width: 768px) {
+            .header { padding: 1rem; }
+            .header-content { flex-direction: column; gap: 0.5rem; text-align: center; }
+            .swimmer-info { text-align: center; }
+            .logo { font-size: 1.2rem; }
+            .swimmer-name { font-size: 1rem; }
+            
+            .container { padding: 0 0.5rem; margin: 1rem auto; }
+            .card { padding: 1rem; }
+            .card-title { font-size: 1.2rem; margin-bottom: 1rem; }
+            
+            .tabs { gap: 0.25rem; margin-bottom: 0.5rem; }
+            .tab { padding: 0.5rem 0.75rem; font-size: 0.85rem; }
+            
+            /* Make tables scrollable */
+            .table-container { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+            table { min-width: 600px; font-size: 0.85rem; }
+            th, td { padding: 0.5rem; }
+            
+            /* Stack stat boxes on mobile */
+            .stats-grid { grid-template-columns: 1fr; }
+            .stat-value { font-size: 2rem; }
+            
+            /* Smaller goal boxes */
+            .goal-box { padding: 1rem; }
+            .goal-label { font-size: 0.85rem; }
+            .goal-value { font-size: 1.8rem; }
+            
+            /* Race analysis mobile */
+            .race-setup { grid-template-columns: 1fr; }
+            .main-timing-btn { padding: 2rem 1rem; font-size: 1.5rem; }
+            
+            /* Workouts folder mobile */
+            .folder-header { padding: 0.75rem; }
+            .folder-name { font-size: 0.95rem; }
+            .folder-count { font-size: 0.75rem; }
+            .workout-item { padding: 0.75rem; }
+            .workout-title { font-size: 0.9rem; }
+            .workout-meta { font-size: 0.75rem; flex-wrap: wrap; }
+            
+            /* Sets tab mobile */
+            .category-section { margin-bottom: 1.5rem; }
+            .set-item { padding: 0.75rem; }
+            .set-name { font-size: 0.9rem; }
+            .set-details { font-size: 0.75rem; }
+        }
+        
         /* Print styles */
         .print-only { display: none; }
         @media print {
@@ -370,6 +418,7 @@
                     </div>
                 </div>
                 
+                <div class="table-container">
                 <table>
                     <thead>
                         <tr>
@@ -580,6 +629,7 @@
                         </tr>
                     </tbody>
                 </table>
+                </div>
             </div>
         </div>
         
@@ -5835,6 +5885,7 @@ document.addEventListener('click', function(e) {
                             <div class="event-header">
                                 <div class="event-name">${data.name} ${courseUpper}</div>
                             </div>
+                            <div class="table-container">
                             <table>
                                 <thead>
                                     <tr>
@@ -5866,6 +5917,7 @@ document.addEventListener('click', function(e) {
                     progHtml += `
                                 </tbody>
                             </table>
+                            </div>
                         </div>
                     `;
                 }

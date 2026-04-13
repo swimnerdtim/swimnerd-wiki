@@ -1,5 +1,5 @@
 # Dave Salo Program Audit: ASU 2025-2026 Season
-**79 Workouts | Sept 2025 - Dec 2025 | NCAA Championship Season**
+**128 Workouts | Sept 2025 - March 2026 | COMPLETE | NCAA Championship Season**
 
 ---
 
@@ -8,11 +8,11 @@
 Comprehensive analysis of Dave Salo's Arizona State 2025-2026 training program reveals a **power-based, kick-dominant methodology** built around underwater excellence and race-pace mastery.
 
 **Program DNA:**
-- **231 total sets** across 79 workouts
-- **226 unique sets** (diversity score: 9.8/10)
-- **Kick-focused:** 28.6% kick volume (66 sets)
-- **Mixed training:** 30.3% mixed sets (stations, choice, variety)
-- **Pull emphasis:** 22.1% pull work (51 sets)
+- **311 total sets** across 128 workouts
+- **302 unique sets** (diversity score: 9.7/10)
+- **Kick-focused:** 25.1% kick volume (78 sets)
+- **Mixed training:** 33.8% mixed sets (stations, choice, variety)
+- **Pull emphasis:** 19.3% pull work (60 sets)
 
 **Philosophy:** Consistently inconsistent - no two weeks identical, preventing staleness while maintaining championship readiness.
 
@@ -131,8 +131,8 @@ Traditional hierarchy: Swim → Pull → Kick
 - Dolphin kick is trainable power
 
 ### 2. **Variety Prevents Staleness**
-**Diversity score: 9.8/10** (excellent)
-- 226 unique sets across 231 total
+**Diversity score: 9.7/10** (excellent)
+- 302 unique sets across 231 total
 - Minimal repetition
 - Constantly rotating stimuli
 
@@ -226,7 +226,7 @@ Traditional hierarchy: Swim → Pull → Kick
 - "FAST" culture (every rep has intent)
 
 **For Distance Programs:**
-- Variety prevents staleness (9.8/10 diversity)
+- Variety prevents staleness (9.7/10 diversity)
 - Mixed work (30%+ of program)
 - Active recovery philosophy ("loosen down")
 - Technique embedded in race pace (not isolated drills)
@@ -241,10 +241,10 @@ Traditional hierarchy: Swim → Pull → Kick
 
 ## 🧮 Sets Library
 
-**Total:** 226 unique sets  
+**Total:** 302 unique sets  
 **Categorized:** Kick (66), Mixed (70), Pull (51), IM (17), Sprint (14), Stroke (9), Race-Prep (3), Drill (1)
 
-**Diversity:** 9.8/10 (excellent variety)
+**Diversity:** 9.7/10 (excellent variety)
 
 ### Sample Signature Sets
 
